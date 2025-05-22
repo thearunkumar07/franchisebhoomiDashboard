@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+      <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+      <meta name="author" content="codedthemes" />
+      <!-- Favicon icon -->
+
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <!-- Google font-->     
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+      <!-- waves.css -->
+      <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <!-- themify-icons line icon -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+      <!-- ico font -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  </head>
+
+  <body themebg-pattern="theme1">
+  <!-- Pre-loader start -->
+  <div class="theme-loader">
+      <div class="loader-track">
+          <div class="preloader-wrapper">
+              <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+              <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Pre-loader end -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #3949ab;
+      --primary-hover: #303f9f;
+      --secondary-color: #00c6ff;
+      --text-dark: #333;
+      --text-light: #6c757d;
+      --body-bg: #f8f9fa;
+      --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      --border-radius: 10px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--body-bg);
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    .auth-container {
+      display: flex;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .auth-left {
+      flex: 1;
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    .auth-left::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIj48L3JlY3Q+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIj48L3JlY3Q+PC9zdmc+') center/cover no-repeat;
+      opacity: 0.3;
+    }
+
+    .brand-logo {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      height: 40px;
+      z-index: 2;
+    }
+
+    .auth-content {
+      position: relative;
+      z-index: 1;
+      max-width: 450px;
+      text-align: center;
+    }
+
+    .auth-content h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .auth-content .quote-subtext {
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+    }
+
+    .features {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .feature-icon {
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .feature-item span {
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    .auth-form {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: #fff;
+      overflow-y: auto;
+      min-height: 100vh;
+    }
+
+    .auth-form-inner {
+      width: 100%;
+      max-width: 420px;
+      padding: 1rem 0;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-container img {
+      height: 40px;
+      width: auto;
+    }
+
+    .form-title {
+      font-size: clamp(1.5rem, 3vw, 1.875rem);
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+      width: 100%;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1rem;
+      border: 1px solid #e0e0e0;
+      font-size: 1rem;
+      transition: var(--transition);
+      background-color: #fff;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.15);
+    }
+
+    .password-field {
+      position: relative;
+    }
+
+    .password-field .form-control {
+      padding-right: 3rem;
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: var(--text-light);
+      font-size: 1rem;
+      border: none;
+      background: transparent;
+      padding: 0.25rem;
+      z-index: 1;
+    }
+
+    .toggle-password:hover {
+      color: var(--text-dark);
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .remember-me input {
+      flex-shrink: 0;
+    }
+
+    .remember-me label {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      color: var(--primary-color);
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .forgot-password:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    .btn-signin {
+      width: 100%;
+      padding: 0.875rem;
+      border-radius: var(--border-radius);
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 1rem;
+    }
+
+    .btn-signin:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--box-shadow);
+    }
+
+    .btn-signin:active {
+      transform: translateY(0);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+      color: var(--text-light);
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #e0e0e0;
+    }
+
+    .divider span {
+      padding: 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    .social-signin {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: var(--border-radius);
+      border: 1px solid #e0e0e0;
+      background-color: white;
+      color: var(--text-dark);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .social-btn:hover {
+      background-color: #f5f5f5;
+      transform: translateY(-2px);
+      box-shadow: var(--box-shadow);
+    }
+
+    .footer-links {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .back-to-website {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      text-decoration: none;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      gap: 0.5rem;
+    }
+
+    .back-to-website:hover {
+      color: var(--text-dark);
+    }
+
+    /* Tablet styles */
+    @media (max-width: 1024px) {
+      .auth-container {
+        flex-direction: column;
+      }
+
+      .auth-left {
+        min-height: 30vh;
+        flex: none;
+      }
+
+      .auth-content {
+        max-width: 100%;
+        padding: 1rem;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .feature-item {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand-logo {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .auth-form {
+        min-height: 70vh;
+        padding: 1.5rem;
+      }
+    }
+
+    /* Mobile devices - Hide branding, show only form */
+    @media (max-width: 1024px) {
+      .auth-left {
+        display: none;
+      }
+
+      .auth-form {
+        flex: 1;
+        min-height: 100vh;
+        padding: 2rem 1.5rem;
+        justify-content: flex-start;
+        padding-top: 3rem;
+      }
+
+      .auth-form-inner {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .logo-container {
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.25rem;
+      }
+
+      .form-control {
+        padding: 0.875rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+      }
+
+      .btn-signin {
+        padding: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .remember-forgot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .social-signin {
+        gap: 0.75rem;
+      }
+
+      .social-btn {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    /* Small mobile devices */
+    @media (max-width: 480px) {
+      .auth-form {
+        padding: 1.5rem 1rem;
+        padding-top: 2rem;
+      }
+
+      .auth-form-inner {
+        padding: 0;
+      }
+
+      .logo-container {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-control {
+        padding: 0.75rem;
+      }
+
+      .remember-me label {
+        font-size: 0.85rem;
+      }
+
+      .forgot-password {
+        font-size: 0.85rem;
+      }
+
+      .btn-signin {
+        padding: 0.875rem;
+        margin-top: 0.75rem;
+      }
+
+      .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 320px) {
+      .auth-form {
+        padding: 1rem 0.75rem;
+        padding-top: 1.5rem;
+      }
+
+      .logo-container img {
+        height: 60px;
+      }
+
+      .form-title {
+        font-size: 1.25rem;
+      }
+
+      .form-control {
+        padding: 0.625rem;
+      }
+
+      .btn-signin {
+        padding: 0.75rem;
+        font-size: 1rem;
+      }
+
+      .footer-links {
+        font-size: 0.85rem;
+      }
+
+      .back-to-website {
+        font-size: 0.85rem;
+      }
+
+      .social-signin {
+        gap: 0.5rem;
+      }
+
+      .social-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* High DPI displays */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .form-control {
+        border-width: 0.5px;
+      }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-dark: #f0f0f0;
+        --text-light: #a0a0a0;
+        --body-bg: #1a1a1a;
+      }
+
+      .auth-form {
+        background-color: #2a2a2a;
+      }
+
+      .form-control {
+        background-color: #3a3a3a;
+        border-color: #4a4a4a;
+        color: var(--text-dark);
+      }
+
+      .form-control:focus {
+        background-color: #3a3a3a;
+      }
+
+      .social-btn {
+        background-color: #3a3a3a;
+        border-color: #4a4a4a;
+        color: var(--text-dark);
+      }
+
+      .social-btn:hover {
+        background-color: #4a4a4a;
+      }
+    }
+
+    /* Focus trap for better accessibility */
+    .form-control:focus,
+    .btn-signin:focus,
+    .remember-me input:focus,
+    .social-btn:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Loading state */
+    .btn-signin:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-signin.loading {
+      position: relative;
+      color: transparent;
+    }
+
+    .btn-signin.loading::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+<div class="auth-container">
+  <!-- Left Branding Section -->
+  <div class="auth-left">
+    <div class="auth-content">
+      <h2>Unlock franchise potential with data-driven solutions</h2>
+      <p class="quote-subtext">Streamline operations, boost productivity, and make informed decisions with our comprehensive management tools.</p>
+      
+      <div class="features">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <span>Real-time performance analytics</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <span>Centralized lead management</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <span>Automated workflow solutions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Sign In Form Section -->
+  <div class="auth-form">
+    <div class="auth-form-inner">
+      <div class="logo-container">
+        <img src="assets/images/Franchaise Logo.jpg" alt="Franchise Bhoomi Logo">
+      </div>
+      
+      <h3 class="form-title">Sign in to your account</h3>
+      
+      <form id="signin-form">
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="password-field">
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            <button type="button" class="toggle-password" toggle="#password" aria-label="Toggle password visibility">
+              <i class="far fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="remember-forgot">
+          <div class="remember-me">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember me</label>
+          </div>
+          <a href="#" class="forgot-password" tabindex="0">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-signin">Sign In</button>
+      </form>
+
+      <!--<div class="divider">
+        <span>or continue with</span>
+      </div>
+
+      <div class="social-signin">
+        <button class="social-btn" type="button" aria-label="Sign in with Google">
+          <i class="fab fa-google"></i>
+        </button>
+        <button class="social-btn" type="button" aria-label="Sign in with Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="social-btn" type="button" aria-label="Sign in with LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </button>
+      </div>-->
+
+      <div class="footer-links">
+        Don't have an account? <a href="#" tabindex="0">Sign Up</a>
+      </div>
+
+      <a href="#" class="back-to-website" tabindex="0">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to website</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Password visibility toggle
+  document.querySelectorAll(".toggle-password").forEach(button => {
+    button.addEventListener("click", function() {
+      const passwordInput = document.querySelector(this.getAttribute("toggle"));
+      const passwordType = passwordInput.getAttribute("type");
+      const newType = passwordType === "password" ? "text" : "password";
+      
+      passwordInput.setAttribute("type", newType);
+      
+      // Toggle icon
+      const icon = this.querySelector("i");
+      icon.classList.toggle("fa-eye");
+      icon.classList.toggle("fa-eye-slash");
+    });
+  });
+  
+  // Form submission handler with loading state
+  document.getElementById("signin-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('.btn-signin');
+    
+    // Add loading state
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+    
+    // Simulate form submission
+    setTimeout(() => {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+      console.log("Sign in successful");
+      // Add your actual form submission logic here
+    }, 2000);
+  });
+
+  // Social sign-in handlers
+  document.querySelectorAll('.social-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const platform = this.querySelector('i').classList.contains('fa-google') ? 'Google' : 
+                     this.querySelector('i').classList.contains('fa-facebook-f') ? 'Facebook' : 'LinkedIn';
+      console.log(`Sign in with ${platform} clicked`);
+      // Add your social sign-in logic here
+    });
+  });
+
+  // Prevent zoom on iOS when focusing inputs
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]').forEach(input => {
+      input.addEventListener('focus', function() {
+        this.style.fontSize = '16px';
+      });
+    });
+  }
+
+  // Keyboard navigation improvements
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && e.target.type !== 'submit') {
+      const form = e.target.closest('form');
+      const inputs = Array.from(form.querySelectorAll('input, button'));
+      const currentIndex = inputs.indexOf(e.target);
+      const nextInput = inputs[currentIndex + 1];
+      
+      if (nextInput) {
+        nextInput.focus();
+        e.preventDefault();
+      }
+    }
+  });
+</script>
+
+    <!-- Warning Section Starts -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>     <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>     <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<!-- modernizr js -->
+    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+<!-- i18next.min.js -->
+<script type="text/javascript" src="bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<script type="text/javascript" src="assets/js/common-pages.js"></script>
+</body>
+
+</html>

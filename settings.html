@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+    <meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="codedthemes" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- morris chart -->
+    <link rel="stylesheet" type="text/css" href="assets/css/morris.js/css/morris.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+         <style>       
+ .frlm-settings-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .frlm-settings-header {
+      background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 0;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .frlm-settings-form-section {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .frlm-settings-section-title {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      color: #495057;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+    
+    .frlm-settings-section-title i {
+      margin-right: 12px;
+      color: #007bff;
+    }
+    
+    .frlm-settings-input {
+      transition: all 0.3s;
+      border: 1px solid #ced4da;
+      padding: 10px 15px;
+      height: auto;
+    }
+    
+    .frlm-settings-input:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    
+    .frlm-settings-label {
+      font-weight: 500;
+      color: #495057;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .frlm-settings-label i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+      color: #6c757d;
+    }
+    
+    .frlm-settings-submit-btn {
+      padding: 12px 45px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      font-size: 1.1rem;
+    }
+    
+    .frlm-settings-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .frlm-settings-file-input-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .frlm-settings-file-btn {
+      border: 1px solid #ced4da;
+      color: #6c757d;
+      background-color: #f8f9fa;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+    }
+    
+    .frlm-settings-file-btn i {
+      margin-right: 10px;
+    }
+    
+    .frlm-settings-file-btn:hover {
+      background-color: #e2e6ea;
+    }
+    
+    .frlm-settings-file-input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .frlm-settings-brochure-preview {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px dashed #ced4da;
+      border-radius: 5px;
+      background-color: #f8f9fa;
+    }
+    
+    .frlm-settings-testimonial-group {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f8f9fa;
+      transition: all 0.3s;
+    }
+    
+    .frlm-settings-testimonial-group:hover {
+      background-color: #e9ecef;
+    }
+    
+    .frlm-settings-testimonial-group .input-group-text {
+      padding: 0 15px;
+    }
+    
+    .frlm-settings-remove-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      border-radius: 50%;
+    }
+    
+    /* Brand Image Preview Styles */
+    .frlm-settings-image-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .frlm-settings-image-card {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .frlm-settings-image-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .frlm-settings-image-container {
+      height: 180px;
+      overflow: hidden;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+    
+    .frlm-settings-image-thumb {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    
+    .frlm-settings-image-details {
+      padding: 12px;
+      text-align: center;
+      background-color: #f8f9fa;
+      border-top: 1px solid #eee;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .frlm-settings-image-filename {
+      font-size: 0.85rem;
+      color: #495057;
+      margin: 0;
+    }
+    
+    .frlm-settings-remove-image {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(220, 53, 69, 0.8);
+      color: white;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+      line-height: 28px;
+      text-align: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .frlm-settings-image-card:hover .frlm-settings-remove-image {
+      opacity: 1;
+    }
+    
+    .frlm-settings-action-buttons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .frlm-settings-link-input {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .frlm-settings-link-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6c757d;
+    }
+    
+    .frlm-settings-link-field {
+      padding-left: 45px;
+    }
+    
+    /* Year dropdown styling */
+    .frlm-settings-year-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23495057' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px 12px;
+      padding-right: 35px !important;
+    }
+    
+    /* Improved spacing for form groups */
+    .frlm-settings-form-group {
+      margin-bottom: 25px;
+    }
+    
+    /* Add button styling */
+    .frlm-settings-add-btn {
+      padding: 8px 20px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    
+    .frlm-settings-add-btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Input group styling */
+    .input-group .form-control:not(:first-child) {
+      border-left: 0;
+    }
+    
+    @media (max-width: 767px) {
+      .frlm-settings-image-preview {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+      
+      .frlm-settings-image-container {
+        height: 140px;
+      }
+      
+      .frlm-settings-form-section {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+            <div class="navbar-wrapper">
+                <div class="navbar-logo">
+                    <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                        <i class="ti-menu"></i>
+                    </a>
+                    <div class="mobile-search waves-effect waves-light">
+                        <div class="header-search">
+                            <div class="main-search morphsearch-search">
+                                <div class="input-group">
+                                    <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html">
+                        <img class="img-fluid" src="assets/images/Franchise Bhoomi logo.png"style= "height: 40px; width:100px;" alt="Theme-Logo" />
+                    </a>
+                    <a class="mobile-options waves-effect waves-light">
+                        <i class="ti-more"></i>
+                    </a>
+                </div>
+            
+                <div class="navbar-container container-fluid">
+                    <ul class="nav-left">
+                        <li>
+                            <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                        </li>
+                        
+                        <li>
+                            <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                <i class="ti-fullscreen"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li class="header-notification">
+                            <a href="#!" class="waves-effect waves-light">
+                                <i class="ti-bell"></i>
+                                <span class="badge bg-c-red"></span>
+                            </a>
+                            <ul class="show-notification">
+                                <li>
+                                    <h6>Notifications</h6>
+                                    <label class="label label-danger">New</label>
+                                </li>
+                                <li class="waves-effect waves-light">
+                                    <div class="media">
+                                        <img class="d-flex align-self-center img-radius" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <h5 class="notification-user">John Doe</h5>
+                                            <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                            <span class="notification-time">30 minutes ago</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="waves-effect waves-light">
+                                    <div class="media">
+                                        <img class="d-flex align-self-center img-radius" src="assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <h5 class="notification-user">Joseph William</h5>
+                                            <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                            <span class="notification-time">30 minutes ago</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="waves-effect waves-light">
+                                    <div class="media">
+                                        <img class="d-flex align-self-center img-radius" src="assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <h5 class="notification-user">Sara Soudein</h5>
+                                            <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                            <span class="notification-time">30 minutes ago</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="user-profile header-notification">
+                            <a href="#!" class="waves-effect waves-light">
+                                <img src="assets/images/Bespoke logo.webp" class="img-radius" alt="User-Profile-Image">
+                                <span>Naturals</span>
+                                <i class="ti-angle-down"></i>
+                            </a>
+                            <ul class="show-notification profile-notification">
+                                <li class="waves-effect waves-light">
+                                    <a href="#!">
+                                        <i class="ti-settings"></i> Settings
+                                    </a>
+                                </li>
+                                <li class="waves-effect waves-light">
+                                    <a href="auth-normal-sign-in.html">
+                                        <i class="ti-layout-sidebar-left"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <nav class="pcoded-navbar">
+                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                    <div class="pcoded-inner-navbar main-menu">
+                        <div class="">
+                            <div class="main-menu-header">
+                                <img class="img-80 img-radius" src="assets/images/Bespoke logo.webp" alt="User-Profile-Image">
+                                <div class="user-details">
+                                    <span id="more-details">Naturals</span>
+                                </div>
+                            </div>
+                    
+                       
+                        <div class="pcoded-navigation-label" data-i18n="nav.category.navigation"></div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="">
+                                <a href="index.html" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                        </li>
+                        <li>
+                            <a href="leads.html" class="waves-effect waves-dark">
+                                <span class="pcoded-micon"><i class="ti-user"></i></span>
+                                <span class="pcoded-mtext">Leads</span>
+                                <span class="pcoded-mcaret"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="settings.html" class="waves-effect waves-dark">
+                                <span class="pcoded-micon"><i class="ti-settings"></i></span>
+                                <span class="pcoded-mtext">Settings</span>
+                                <span class="pcoded-mcaret"></span>
+                            </a>
+                        </li>     
+                    </div>
+                </nav>
+                <div class="pcoded-content">
+                    <!-- Page-header start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Settings</h5>
+                                        <p class="m-b-0"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="breadcrumb-title">
+                                        <li class="breadcrumb-item">
+                                            <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                        </li>
+                                        <li class="breadcrumb-item"><a href="#!">Pages</a>
+                                        </li>
+                                        <li class="breadcrumb-item"><a href="#!">Sample Page</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page-header end -->
+   
+
+  <div class="container-fluid py-4 frlm-settings-container">
+    <h2 class="frlm-settings-header mb-0">Franchise Settings</h2>
+    
+    <form id="frlm-settings-form" class="frlm-settings-form-section">
+      <!-- Basic Information Section -->
+      <h4 class="frlm-settings-section-title"><i class="fas fa-info-circle"></i>Basic Information</h4>
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <label for="frlm-settings-brandName" class="frlm-settings-label">Brand Name</label>
+          <input type="text" class="form-control frlm-settings-input" id="frlm-settings-brandName" name="frlm-settings-brandName" required />
+        </div>
+        <div class="col-md-6">
+          <label for="frlm-settings-founderName" class="frlm-settings-label">Founder/MD Name</label>
+          <input type="text" class="form-control frlm-settings-input" id="frlm-settings-founderName" name="frlm-settings-founderName" required />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="frlm-settings-brandAddress" class="frlm-settings-label">Brand Address</label>
+        <input type="text" class="form-control frlm-settings-input" id="frlm-settings-brandAddress" name="frlm-settings-brandAddress" required />
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-4 frlm-settings-form-group">
+          <label for="frlm-settings-brandYear" class="frlm-settings-label">
+            <i class="fas fa-calendar-alt"></i>Year of Establishment
+          </label>
+          <select class="form-select frlm-settings-input frlm-settings-year-select" id="frlm-settings-brandYear" name="frlm-settings-brandYear" required>
+            <option value="">Select Year</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="frlm-settings-phoneNumber" class="frlm-settings-label"><i class="fas fa-phone me-2"></i>Phone Number (+91)</label>
+          <input type="text" class="form-control frlm-settings-input frlm-settings-phone" id="frlm-settings-phoneNumber" name="frlm-settings-phoneNumber" maxlength="10" placeholder="10-digit mobile" required />
+        </div>
+        <div class="col-md-4">
+          <label for="frlm-settings-whatsappNumber" class="frlm-settings-label"><i class="fab fa-whatsapp me-2"></i>WhatsApp Number (+91)</label>
+          <input type="text" class="form-control frlm-settings-input frlm-settings-whatsapp" id="frlm-settings-whatsappNumber" name="frlm-settings-whatsappNumber" maxlength="10" placeholder="10-digit mobile" required />
+        </div>
+      </div>
+
+      <!-- Brochure Upload Section -->
+      <h4 class="frlm-settings-section-title"><i class="fas fa-file-pdf me-2"></i>Brochure</h4>
+      <div class="mb-4">
+        <label class="frlm-settings-label d-block">Upload Brochure (Max 25MB)</label>
+        <div class="frlm-settings-file-input-wrapper">
+          <div class="frlm-settings-file-btn">
+            <i class="fas fa-upload me-2"></i>Choose File
+          </div>
+          <input type="file" class="frlm-settings-file-input" id="frlm-settings-brochureFile" accept="application/pdf,image/*" />
+        </div>
+        <div id="frlm-settings-brochurePreview" class="frlm-settings-brochure-preview d-none">
+          <!-- Preview will be injected here -->
+        </div>
+      </div>
+
+      <!-- Brand Images Section -->
+      <h4 class="frlm-settings-section-title"><i class="fas fa-images me-2"></i>Brand Images</h4>
+      <div class="mb-4">
+        <label class="frlm-settings-label d-block">Upload Brand Images (Max 5, 25MB each)</label>
+        <div class="frlm-settings-file-input-wrapper">
+          <div class="frlm-settings-file-btn">
+            <i class="fas fa-images me-2"></i>Select Images
+          </div>
+          <input type="file" class="frlm-settings-file-input" id="frlm-settings-brandImages" accept="image/*" multiple />
+        </div>
+        
+        <div id="frlm-settings-imagePreview" class="frlm-settings-image-preview">
+          <!-- Image cards will be injected here -->
+        </div>
+        
+        <div class="frlm-settings-action-buttons">
+          <button type="button" class="btn btn-warning btn-sm" id="frlm-settings-clearImages">
+            <i class="fas fa-trash-alt me-2"></i>Clear All Images
+          </button>
+          <span class="text-muted"><small id="frlm-settings-imageCounter">0/5 images uploaded</small></span>
+        </div>
+      </div>
+
+      <!-- Social Links Section -->
+      <h4 class="frlm-settings-section-title"><i class="fas fa-link me-2"></i>Social Links</h4>
+      <div class="mb-4">
+        <div class="mb-3 frlm-settings-link-input">
+          <label for="frlm-settings-websiteLink" class="frlm-settings-label">Brand Website</label>
+          <i class="fas fa-globe frlm-settings-link-icon"></i>
+          <input type="url" class="form-control frlm-settings-input frlm-settings-link-field" id="frlm-settings-websiteLink" name="frlm-settings-websiteLink" placeholder="https://yourbrand.com" />
+        </div>
+        <div class="mb-3 frlm-settings-link-input">
+          <label for="frlm-settings-instagramLink" class="frlm-settings-label">Instagram</label>
+          <i class="fab fa-instagram frlm-settings-link-icon"></i>
+          <input type="url" class="form-control frlm-settings-input frlm-settings-link-field" id="frlm-settings-instagramLink" name="frlm-settings-instagramLink" placeholder="https://instagram.com/yourbrand" />
+        </div>
+        <div class="mb-3 frlm-settings-link-input">
+          <label for="frlm-settings-youtubeLink" class="frlm-settings-label">YouTube</label>
+          <i class="fab fa-youtube frlm-settings-link-icon"></i>
+          <input type="url" class="form-control frlm-settings-input frlm-settings-link-field" id="frlm-settings-youtubeLink" name="frlm-settings-youtubeLink" placeholder="https://youtube.com/c/yourbrand" />
+        </div>
+      </div>
+
+      <!-- Testimonial Links Section -->
+      <h4 class="frlm-settings-section-title"><i class="fas fa-quote-right me-2"></i>Testimonial Links</h4>
+      <div id="frlm-settings-testimonialLinks" class="mb-3">
+        <!-- Testimonial inputs will be injected here -->
+      </div>
+      <button type="button" class="btn btn-outline-secondary btn-sm" id="frlm-settings-addTestimonial">
+        <i class="fas fa-plus me-2"></i>Add More
+      </button>
+
+      <!-- Submit Button -->
+      <div class="text-center mt-5">
+        <button type="submit" class="btn btn-primary frlm-settings-submit-btn">
+          Save Settings
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById("frlm-settings-form");
+      const testimonialContainer = document.getElementById("frlm-settings-testimonialLinks");
+      const brochureFile = document.getElementById("frlm-settings-brochureFile");
+      const brochurePreview = document.getElementById("frlm-settings-brochurePreview");
+      const brandImageInput = document.getElementById("frlm-settings-brandImages");
+      const brandImagePreview = document.getElementById("frlm-settings-imagePreview");
+      const imageCounter = document.getElementById("frlm-settings-imageCounter");
+      const clearImagesBtn = document.getElementById("frlm-settings-clearImages");
+      const addTestimonialBtn = document.getElementById("frlm-settings-addTestimonial");
+      
+      // Storage key for our application
+      const STORAGE_KEY = "frlm-settings-data";
+      
+      // Add testimonial input field
+      function addTestimonial(value = "") {
+        const wrapper = document.createElement("div");
+        wrapper.className = "frlm-settings-testimonial-group";
+        wrapper.innerHTML = `
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-quote-left"></i></span>
+            <input type="url" class="form-control frlm-settings-input" name="frlm-settings-testimonialLinks" 
+              value="${value}" placeholder="Testimonial URL (YouTube, Instagram, etc.)">
+            <button type="button" class="btn btn-danger frlm-settings-remove-btn" onclick="removeTestimonial(this)">×</button>
+          </div>
+        `;
+        testimonialContainer.appendChild(wrapper);
+      }
+      
+      // Remove testimonial
+      window.removeTestimonial = function(button) {
+        button.closest('.frlm-settings-testimonial-group').remove();
+      };
+      
+      // Populate year dropdown (1980-current year)
+      function populateYearDropdown() {
+        const yearSelect = form.elements["frlm-settings-brandYear"];
+        const currentYear = new Date().getFullYear();
+        for (let y = currentYear; y >= 1980; y--) {
+          const option = document.createElement("option");
+          option.value = y;
+          option.textContent = y;
+          yearSelect.appendChild(option);
+        }
+      }
+      
+      // Get filename from path or data URL
+      function getFileName(path) {
+        // For data URLs, create a friendly name
+        if (path.startsWith('data:')) {
+          const fileType = path.split(';')[0].split('/')[1];
+          return `Image-${new Date().getTime()}.${fileType}`;
+        }
+        
+        // For regular paths
+        return path.split('\\').pop().split('/').pop();
+      }
+      
+      // Update image counter
+      function updateImageCounter() {
+        const imageCount = document.querySelectorAll('.frlm-settings-image-card').length;
+        imageCounter.textContent = `${imageCount}/5 images uploaded`;
+      }
+      
+      // Load saved data from localStorage
+      function loadFromStorage() {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        if (!saved) {
+          addTestimonial();
+          return;
+        }
+        
+        // Fill form fields
+        for (const [key, value] of Object.entries(saved)) {
+          if (key === "frlm-settings-testimonialLinks") {
+            // Create testimonial input fields with saved values
+            if (Array.isArray(value) && value.length > 0) {
+              value.forEach((link) => addTestimonial(link));
+            } else {
+              addTestimonial();
+            }
+          } else if (key === "frlm-settings-brandImages") {
+            // Create image cards for saved images
+            if (Array.isArray(value) && value.length > 0) {
+              value.forEach((imageData, index) => {
+                addImageCard(imageData, `Image-${index + 1}`);
+              });
+              updateImageCounter();
+            }
+          } else if (form.elements[key]) {
+            form.elements[key].value = value;
+          }
+        }
+        
+        // Handle brochure preview
+        if (saved.brochureName && saved.brochureURL) {
+          displayBrochurePreview(saved.brochureURL, saved.brochureName);
+        }
+      }
+      
+      // Display brochure preview
+      function displayBrochurePreview(url, name) {
+        brochurePreview.innerHTML = `
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-file-pdf fs-3 text-danger me-3"></i>
+              <div>
+                <strong>${name}</strong>
+                <small class="d-block text-muted">Click download to save the file</small>
+              </div>
+            </div>
+            <div>
+              <a href="${url}" download="${name}" class="btn btn-sm btn-info">
+                <i class="fas fa-download me-1"></i>Download
+              </a>
+              <button type="button" class="btn btn-sm btn-danger ms-2" id="frlm-settings-removeBrochure">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+        `;
+        brochurePreview.classList.remove('d-none');
+        
+        // Add event listener for remove button
+        document.getElementById('frlm-settings-removeBrochure').addEventListener('click', function() {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+          delete saved.brochureName;
+          delete saved.brochureURL;
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+          brochurePreview.innerHTML = '';
+          brochurePreview.classList.add('d-none');
+          brochureFile.value = '';
+        });
+      }
+      
+      // Add image card to preview
+      function addImageCard(imageUrl, customFileName = null) {
+        const fileName = customFileName || getFileName(imageUrl);
+        const card = document.createElement('div');
+        card.className = 'frlm-settings-image-card';
+        card.dataset.src = imageUrl;
+        
+        card.innerHTML = `
+          <div class="frlm-settings-image-container">
+            <img src="${imageUrl}" class="frlm-settings-image-thumb" alt="${fileName}">
+          </div>
+          <div class="frlm-settings-image-details">
+            <p class="frlm-settings-image-filename" title="${fileName}">${fileName}</p>
+          </div>
+          <span class="frlm-settings-remove-image" title="Remove image">×</span>
+        `;
+        
+        // Add event listener for remove button
+        const removeBtn = card.querySelector('.frlm-settings-remove-image');
+        removeBtn.addEventListener('click', function() {
+          removeImage(card);
+        });
+        
+        brandImagePreview.appendChild(card);
+        updateImageCounter();
+      }
+      
+      // Remove image
+      function removeImage(card) {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        const imageUrl = card.dataset.src;
+        
+        if (saved["frlm-settings-brandImages"]) {
+          saved["frlm-settings-brandImages"] = saved["frlm-settings-brandImages"].filter(url => url !== imageUrl);
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+        }
+        
+        card.remove();
+        updateImageCounter();
+      }
+      
+      // Clear all images
+      function clearAllImages() {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        saved["frlm-settings-brandImages"] = [];
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+        
+        brandImagePreview.innerHTML = '';
+        updateImageCounter();
+      }
+      
+      // Form submission handler
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        // Create data object from form fields
+        const data = {};
+        [...form.elements].forEach((el) => {
+          if (el.name && el.name !== "frlm-settings-testimonialLinks" && el.type !== "file") {
+            data[el.name] = el.value;
+          }
+        });
+        
+        // Get testimonial links
+        const testimonialLinks = [...document.querySelectorAll('[name="frlm-settings-testimonialLinks"]')]
+          .map((input) => input.value)
+          .filter((link) => link.trim() !== "");
+        data["frlm-settings-testimonialLinks"] = testimonialLinks;
+        
+        // Get image sources
+        const imageSources = [...document.querySelectorAll('.frlm-settings-image-card')]
+          .map(card => card.dataset.src);
+        data["frlm-settings-brandImages"] = imageSources;
+        
+        // Get existing brochure data
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        if (saved.brochureName && saved.brochureURL) {
+          data.brochureName = saved.brochureName;
+          data.brochureURL = saved.brochureURL;
+        }
+        
+        // Save to localStorage
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        
+        // Show success message
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+        alertDiv.role = 'alert';
+        alertDiv.innerHTML = `
+          <strong><i class="fas fa-check-circle me-2"></i>Success!</strong> Your settings have been saved successfully.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        form.appendChild(alertDiv);
+        
+        // Scroll to success message
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+        
+        // Remove alert after 3 seconds
+        setTimeout(() => {
+          alertDiv.remove();
+        }, 3000);
+      });
+      
+      // Brochure file handler
+      brochureFile.addEventListener("change", function() {
+        const file = this.files[0];
+        if (!file) return;
+        
+        if (file.size > 25 * 1024 * 1024) {
+          alert("File is too large. Maximum size is 25MB.");
+          this.value = "";
+          return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+          saved.brochureName = file.name;
+          saved.brochureURL = e.target.result;
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+          
+          displayBrochurePreview(e.target.result, file.name);
+        };
+        reader.readAsDataURL(file);
+      });
+      
+      // Brand images handler
+      brandImageInput.addEventListener("change", function() {
+        const files = [...this.files];
+        if (files.length === 0) return;
+        
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        
+        // Initialize array if it doesn't exist
+        if (!saved["frlm-settings-brandImages"]) {
+          saved["frlm-settings-brandImages"] = [];
+        }
+        
+        // Get current image count
+        const currentCount = document.querySelectorAll('.frlm-settings-image-card').length;
+        
+        // Check if adding these files would exceed the 5-image limit
+        if (currentCount + files.length > 5) {
+          alert(`Maximum 5 images allowed. You already have ${currentCount} images.`);
+          this.value = "";
+          return;
+        }
+        
+        // Process each file
+        files.forEach((file) => {
+          if (file.size > 25 * 1024 * 1024) {
+            alert(`File "${file.name}" is too large. Maximum size is 25MB.`);
+            return;
+          }
+          
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            // Add new image to array and preview
+            saved["frlm-settings-brandImages"].push(e.target.result);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+            
+            addImageCard(e.target.result, file.name);
+          };
+          reader.readAsDataURL(file);
+        });
+        
+        // Clear input
+        this.value = "";
+      });
+      
+      // Phone number validation (digits only)
+      document.querySelectorAll(".frlm-settings-phone, .frlm-settings-whatsapp").forEach((input) => {
+        input.addEventListener("input", function() {
+          this.value = this.value.replace(/\D/g, "");
+        });
+      });
+      
+      // Event listeners for buttons
+      clearImagesBtn.addEventListener('click', clearAllImages);
+      addTestimonialBtn.addEventListener('click', () => addTestimonial());
+      
+      // Initialize
+      populateYearDropdown();
+      loadFromStorage();
+    });
+  </script>
+                <div id="styleSelector">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers
+        to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>     <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>     <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<!-- modernizr js -->
+    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/vertical-layout.min.js "></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>
