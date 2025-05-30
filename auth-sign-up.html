@@ -95,7 +95,7 @@
   <!-- Pre-loader end -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
-  <style>
+   <style>
     :root {
       --primary-color: #3949ab;
       --primary-hover: #303f9f;
@@ -106,6 +106,9 @@
       --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       --border-radius: 10px;
       --transition: all 0.3s ease;
+      --success-color: #4caf50;
+      --error-color: #f44336;
+      --border-color: #e0e0e0;
     }
 
     * {
@@ -117,13 +120,15 @@
     body {
       font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--body-bg);
-      line-height: 1.6;
+      line-height: 1.4;
       color: var(--text-dark);
+      height: 100vh;
+      overflow: hidden;
     }
 
     .auth-container {
       display: flex;
-      min-height: 100vh;
+      height: 100vh;
       position: relative;
     }
 
@@ -136,7 +141,7 @@
       justify-content: center;
       position: relative;
       overflow: hidden;
-      padding: 2rem;
+      padding: 1.5rem;
     }
 
     .auth-left::before {
@@ -152,31 +157,31 @@
 
     .brand-logo {
       position: absolute;
-      top: 1.5rem;
-      left: 1.5rem;
-      height: 40px;
+      top: 1rem;
+      left: 1rem;
+      height: 32px;
       z-index: 2;
     }
 
     .auth-content {
       position: relative;
       z-index: 1;
-      max-width: 450px;
+      max-width: 400px;
       text-align: center;
     }
 
     .auth-content h2 {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
       font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 1rem;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
     }
 
     .auth-content .quote-subtext {
-      font-size: clamp(1rem, 2.5vw, 1.125rem);
-      margin-bottom: 2rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin-bottom: 1.5rem;
       color: rgba(255, 255, 255, 0.85);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .features {
@@ -189,6 +194,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      text-align: left;
     }
 
     .feature-icon {
@@ -199,13 +205,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 1rem;
+      margin-right: 0.8rem;
       flex-shrink: 0;
     }
 
+    .feature-icon i {
+      font-size: 0.9rem;
+    }
+
     .feature-item span {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       text-align: left;
+      line-height: 1.3;
     }
 
     .auth-form {
@@ -213,45 +224,150 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 1.5rem;
       background-color: #fff;
-      overflow-y: auto;
-      min-height: 100vh;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .auth-form-inner {
       width: 100%;
       max-width: 420px;
-      padding: 1rem 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .logo-container {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .logo-container img {
-      height:40px;
+      height: 40px;
       width: auto;
+      object-fit: contain;
     }
 
     .form-title {
-      font-size: clamp(1.5rem, 3vw, 1.875rem);
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
       font-weight: 600;
       color: var(--text-dark);
       margin-bottom: 1.5rem;
       text-align: center;
     }
 
+    /* Step Navigation - Compressed */
+    .step-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
+
+    .step-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      flex: 0 0 auto;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      transition: var(--transition);
+      border: 2px solid var(--border-color);
+      background-color: #fff;
+      color: var(--text-light);
+      position: relative;
+    }
+
+    .step-nav-item.active .step-number {
+      background-color: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.2);
+    }
+
+    .step-nav-item.completed .step-number {
+      background-color: var(--success-color);
+      color: white;
+      border-color: var(--success-color);
+    }
+
+    .step-label {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      font-weight: 500;
+      text-align: center;
+      min-height: 2rem;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .step-nav-item.active .step-label {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .step-nav-item.completed .step-label {
+      color: var(--success-color);
+      font-weight: 600;
+    }
+
+    .step-connector {
+      flex: 1;
+      height: 2px;
+      background-color: #e0e0e0;
+      margin: 0 0.8rem;
+      position: relative;
+      top: -25px;
+      border-radius: 2px;
+    }
+
+    .step-connector.completed {
+      background-color: var(--success-color);
+    }
+
+    /* Form Steps - Constrained height */
+    .form-step {
+      display: none;
+      min-height: 240px;
+      max-height: 280px;
+    }
+
+    .form-step.active {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
     .form-group {
       position: relative;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.2rem;
     }
 
     .form-label {
       display: block;
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       color: var(--text-dark);
       margin-bottom: 0.5rem;
     }
@@ -259,11 +375,13 @@
     .form-control {
       width: 100%;
       border-radius: var(--border-radius);
-      padding: 0.75rem 1rem;
-      border: 1px solid #e0e0e0;
-      font-size: 1rem;
+      padding: 0.8rem 1rem;
+      border: 2px solid #e0e0e0;
+      font-size: 0.9rem;
       transition: var(--transition);
       background-color: #fff;
+      font-family: inherit;
+      height: 45px;
     }
 
     .form-control:focus {
@@ -272,186 +390,312 @@
       box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.15);
     }
 
-    .password-field {
-      position: relative;
+    .form-control.error {
+      border-color: var(--error-color);
     }
 
-    .password-field .form-control {
-      padding-right: 3rem;
-    }
-
-    .toggle-password {
-      position: absolute;
-      top: 25%;
-      right: 1rem;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: var(--text-light);
-      font-size: 1rem;
-      border: none;
-      background: transparent;
-      padding: 0.25rem;
-      z-index: 1;
-    }
-    .toggle-confirm-password{
-      position: absolute;
-      top: 50%;
-      right: 1rem;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: var(--text-light);
-      font-size: 1rem;
-      border: none;
-      background: transparent;
-      padding: 0.25rem;
-      z-index: 1;
-    }
-
-    .toggle-password:hover, .toggle-confirm-password:hover {
-      color: var(--text-dark);
-    }
-
-    .form-check {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.25rem;
-      gap: 0.75rem;
-    }
-
-    .form-check-input {
-      margin-top: 0.25rem;
-      flex-shrink: 0;
-    }
-
-    .form-check-label {
-      font-size: 0.9rem;
-      color: var(--text-dark);
-      line-height: 1.5;
-    }
-
-    .form-check-label a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .form-check-label a:hover {
-      text-decoration: underline;
-    }
-
-    .btn-signup {
+    .form-select {
       width: 100%;
-      padding: 0.875rem;
       border-radius: var(--border-radius);
-      background-color: var(--primary-color);
-      color: white;
-      font-weight: 500;
-      font-size: 1rem;
-      border: none;
-      cursor: pointer;
-      transition: var(--transition);
-      margin-top: 1rem;
-    }
-
-    .btn-signup:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-2px);
-      box-shadow: var(--box-shadow);
-    }
- 
-    .btn-signup:active {
-      transform: translateY(0);
-    }
-
-    .footer-links {
-      text-align: center;
-      margin-top: 1.5rem;
-      color: var(--text-light);
+      padding: 0.8rem 1rem;
+      border: 2px solid #e0e0e0;
       font-size: 0.9rem;
+      transition: var(--transition);
+      background-color: #fff;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.8rem center;
+      background-size: 0.8em;
+      line-height: 1.4;
+       min-height: 55px;
     }
 
-    .footer-links a {
+    .form-select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.15);
+    }
+
+    .error-message {
+      color: var(--error-color);
+      font-size: 0.75rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    /* File Upload Styles - Compressed */
+    .file-upload-container {
+      border: 2px dashed var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      background-color: #fafafa;
+    }
+
+    .file-upload-container:hover {
+      border-color: var(--primary-color);
+      background-color: rgba(57, 73, 171, 0.05);
+      transform: translateY(-1px);
+    }
+
+    .file-upload-container.dragover {
+      border-color: var(--primary-color);
+      background-color: rgba(57, 73, 171, 0.1);
+      transform: scale(1.01);
+    }
+
+    .file-upload-icon {
+      font-size: 2rem;
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+    }
+
+    .file-upload-text {
+      color: var(--text-dark);
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .file-upload-subtext {
+      color: var(--text-light);
+      font-size: 0.75rem;
+    }
+
+    .file-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .file-preview {
+      display: none;
+      background-color: #f8f9fa;
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      margin-top: 0.8rem;
+      border: 1px solid #e0e0e0;
+    }
+
+    .file-preview.show {
+      display: block;
+    }
+
+    .file-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .file-details {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .file-icon {
       color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
+      font-size: 1.4rem;
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
+    .file-meta h4 {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      font-weight: 600;
     }
 
-    .back-to-website {
+    .file-meta p {
+      margin: 0;
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+
+    .delete-file {
+      background: none;
+      border: none;
+      color: #f44336;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: var(--transition);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-light);
-      text-decoration: none;
-      margin-top: 1.5rem;
-      font-size: 0.9rem;
-      transition: var(--transition);
-      gap: 0.5rem;
     }
 
-    .back-to-website:hover {
-      color: var(--text-dark);
+    .delete-file:hover {
+      background-color: rgba(244, 67, 54, 0.1);
+      transform: scale(1.1);
     }
 
-    /* Password strength meter */
-    .password-strength {
-      height: 4px;
-      margin-top: 0.5rem;
-      border-radius: 4px;
-      background-color: #e0e0e0;
-      overflow: hidden;
-    }
-
-    .password-strength-meter {
-      height: 100%;
-      width: 0;
-      transition: var(--transition);
-      border-radius: 4px;
-    }
-
-    .strength-weak {
-      width: 25%;
-      background-color: #f44336;
-    }
-
-    .strength-fair {
-      width: 50%;
-      background-color: #ff9800;
-    }
-
-    .strength-good {
-      width: 75%;
-      background-color: #2196f3;
-    }
-
-    .strength-strong {
-      width: 100%;
-      background-color: #4caf50;
-    }
-
-    .password-feedback {
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
+    /* Navigation Buttons - Compressed */
+    .form-navigation {
       display: flex;
       justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
       align-items: center;
     }
 
-    .password-feedback span {
-      color: var(--text-light);
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      min-width: 120px;
+      justify-content: center;
     }
 
-    /* Tablet styles */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+      color: white;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-secondary {
+      background-color: #f8f9fa;
+      color: var(--text-dark);
+      border: 2px solid #e0e0e0;
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background-color: #e9ecef;
+      border-color: #adb5bd;
+      transform: translateY(-1px);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    .btn.loading {
+      position: relative;
+      color: transparent !important;
+    }
+
+    .btn.loading::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Success Modal - Enhanced */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 2.5rem 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.3s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-icon {
+      font-size: 3.5rem;
+      color: #FFA500;
+      margin-bottom: 1.2rem;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .modal-text {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .modal-close {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+
+    .modal-close:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Responsive Design - Enhanced */
     @media (max-width: 1024px) {
       .auth-container {
         flex-direction: column;
       }
 
       .auth-left {
-        min-height: 30vh;
+        min-height: 35vh;
         flex: none;
       }
 
@@ -462,12 +706,12 @@
 
       .features {
         grid-template-columns: 1fr;
-        gap: 0.75rem;
+        gap: 0.8rem;
       }
 
       .feature-item {
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
       }
 
       .brand-logo {
@@ -476,23 +720,38 @@
       }
 
       .auth-form {
-        min-height: 70vh;
+        height: 65vh;
         padding: 1.5rem;
+      }
+
+      .step-navigation {
+        margin-bottom: 1.5rem;
+      }
+
+      .step-connector {
+        margin: 0 0.6rem;
       }
     }
 
-    /* Mobile devices - Hide branding, show only form */
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
+      body {
+        overflow-y: auto;
+      }
+
+      .auth-container {
+        height: auto;
+        min-height: 100vh;
+      }
+
       .auth-left {
         display: none;
       }
 
       .auth-form {
         flex: 1;
-        min-height: 100vh;
-        padding: 2rem 1.5rem;
-        justify-content: flex-start;
-        padding-top: 3rem;
+        height: 100vh;
+        padding: 1.5rem;
+        justify-content: center;
       }
 
       .auth-form-inner {
@@ -501,176 +760,85 @@
       }
 
       .logo-container {
-        margin-bottom: 2rem;
-      }
-
-      .form-group {
-        margin-bottom: 1.25rem;
-      }
-
-      .form-control {
-        padding: 0.875rem;
-        font-size: 16px; /* Prevents zoom on iOS */
-      }
-
-      .btn-signup {
-        padding: 1rem;
-        font-size: 1.1rem;
-      }
-    }
-
-    /* Small mobile devices */
-    @media (max-width: 480px) {
-      .auth-form {
-        padding: 1.5rem 1rem;
-        padding-top: 2rem;
-      }
-
-      .auth-form-inner {
-        padding: 0;
-      }
-
-      .logo-container {
         margin-bottom: 1.5rem;
       }
 
-      .form-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.25rem;
-      }
-
       .form-group {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
       }
 
-      .form-control {
-        padding: 0.75rem;
+      .form-control, .form-select {
+        padding: 0.8rem;
+        font-size: 16px; /* Prevents zoom on iOS */
       }
 
-      .form-check-label {
-        font-size: 0.85rem;
+      .step-navigation {
+        margin-bottom: 1.5rem;
       }
 
-      .password-feedback {
-        font-size: 0.75rem;
+      .step-nav-item {
+        max-width: 100px;
       }
 
-      .btn-signup {
-        padding: 0.875rem;
-        margin-top: 0.75rem;
-      }
-    }
-
-    /* Extra small devices */
-    @media (max-width: 320px) {
-      .auth-form {
-        padding: 1rem 0.75rem;
-        padding-top: 1.5rem;
+      .step-label {
+        font-size: 0.7rem;
       }
 
-      .logo-container img {
-        height: 60px;
+      .form-navigation {
+        flex-direction: column;
+        gap: 0.8rem;
       }
 
-      .form-title {
-        font-size: 1.25rem;
-      }
-
-      .form-control {
-        padding: 0.625rem;
-      }
-
-      .btn-signup {
-        padding: 0.75rem;
+      .btn {
+        padding: 1rem;
         font-size: 1rem;
-      }
-
-      .footer-links {
-        font-size: 0.85rem;
-      }
-
-      .back-to-website {
-        font-size: 0.85rem;
+        width: 100%;
       }
     }
 
-    /* High DPI displays */
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      .form-control {
-        border-width: 0.5px;
-      }
-
-      .password-strength {
-        height: 3px;
-      }
-    }
-
-    /* Dark mode support */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text-dark: #f0f0f0;
-        --text-light: #a0a0a0;
-        --body-bg: #1a1a1a;
-      }
-
+    @media (max-width: 480px) {
       .auth-form {
-        background-color: #2a2a2a;
+        padding: 1rem;
       }
 
-      .form-control {
-        background-color: #3a3a3a;
-        border-color: #4a4a4a;
-        color: var(--text-dark);
+      .step-label {
+        font-size: 0.65rem;
       }
 
-      .form-control:focus {
-        background-color: #3a3a3a;
+      .step-nav-item {
+        max-width: 70px;
+      }
+
+      .step-connector {
+        margin: 0 0.4rem;
+      }
+
+      .file-upload-container {
+        padding: 1.5rem 1rem;
+      }
+
+      .modal-content {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+      }
+
+      .form-step {
+        min-height: 220px;
+        max-height: 260px;
       }
     }
 
-    /* Focus trap for better accessibility */
-    .form-control:focus,
-    .btn-signup:focus,
-    .form-check-input:focus {
-      outline: 2px solid var(--primary-color);
-      outline-offset: 2px;
-    }
-
-    /* Loading state */
-    .btn-signup:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .btn-signup.loading {
-      position: relative;
-      color: transparent;
-    }
-
-    .btn-signup.loading::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      top: 50%;
-      left: 50%;
-      margin-left: -10px;
-      margin-top: -10px;
-      border: 2px solid #ffffff;
-      border-radius: 50%;
-      border-top-color: transparent;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
+    /* Ensure no scroll on larger screens */
+    @media (min-width: 769px) {
+      body {
+        overflow: hidden;
+      }
+      
+      .auth-container {
+        height: 100vh;
       }
     }
-  </style>
-</head>
-<body>
+</style>
 
 <div class="auth-container">
   <!-- Left Branding Section -->
@@ -711,184 +879,509 @@
       
       <h3 class="form-title">Create your account</h3>
       
+      <!-- Step Navigation -->
+      <div class="step-navigation">
+        <div class="step-nav-item active" data-step="1">
+          <div class="step-number">1</div>
+          <div class="step-label">Personal Info</div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-nav-item" data-step="2">
+          <div class="step-number">2</div>
+          <div class="step-label">Brand Info</div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-nav-item" data-step="3">
+          <div class="step-number">3</div>
+          <div class="step-label">Upload Brochure</div>
+        </div>
+      </div>
+
       <form id="signup-form">
-        <div class="form-group">
-          <label class="form-label" for="brand-name">Brand Name</label>
-          <input type="text" id="brand-name" class="form-control" placeholder="Enter your brand name" required>
+        <!-- Step 1: Personal Information -->
+        <div class="form-step active" data-step="1">
+          <div class="form-group">
+            <label class="form-label" for="fullName">Your Name *</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            <div class="error-message" id="fullName-error">Please enter your full name</div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="phoneNumber">Your Phone Number *</label>
+            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="+91 XXXXX XXXXX" required>
+            <div class="error-message" id="phoneNumber-error">Please enter a valid phone number</div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="role">Your Role *</label>
+            <select class="form-control form-select" id="role" name="role" required>
+              <option value="">Select your role</option>
+              <option value="business-owner">Business Owner</option>
+              <option value="entrepreneur">Entrepreneur</option>
+              <option value="investor">Investor</option>
+              <option value="franchise-consultant">Franchise Consultant</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="error-message" id="role-error">Please select your role</div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="email">Email Address</label>
-          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        <!-- Step 2: Brand Information -->
+        <div class="form-step" data-step="2">
+          <div class="form-group">
+            <label class="form-label" for="brandName">Brand Name *</label>
+            <input type="text" class="form-control" id="brandName" name="brandName" placeholder="Enter your brand name" required>
+            <div class="error-message" id="brandName-error">Please enter your brand name</div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="whatsappNumber">WhatsApp Number *</label>
+            <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber" placeholder="+91 XXXXX XXXXX" required>
+            <div class="error-message" id="whatsappNumber-error">Please enter a valid WhatsApp number</div>
+          </div>
+          
+          <div class="form-group">
+  <label class="form-label" for="brandLocation">Brand Location *</label>
+  <select class="form-control" id="brandLocation" name="brandLocation" required>
+    <option value="">-- Select State --</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Ladakh">Ladakh</option>
+    <option value="Lakshadweep">Lakshadweep</option>
+    <option value="Puducherry">Puducherry</option>
+  </select>
+  <div class="error-message" id="brandLocation-error">Please select your brand location</div>
+</div>
+
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="password">Password</label>
-          <div class="password-field">
-            <input type="password" class="form-control" id="password" placeholder="Create a password" required>
-            <button type="button" class="toggle-password" toggle="#password" aria-label="Toggle password visibility">
-              <i class="far fa-eye"></i>
-            </button>
-            <div class="password-strength">
-              <div class="password-strength-meter" id="password-meter"></div>
+        <!-- Step 3: Upload Brochure -->
+        <div class="form-step" data-step="3">
+          <div class="form-group">
+            <label class="form-label">Your Brand Brochure *</label>
+            <div class="file-upload-container" id="fileUpload">
+              <div class="file-upload-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+              </div>
+              <div class="file-upload-text">Click to upload or drag and drop</div>
+              <div class="file-upload-subtext">PDF, DOC, DOCX, JPG, PNG (Max 50MB)</div>
+              <input type="file" class="file-input" id="brochureFile" name="brochureFile" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
             </div>
-            <div class="password-feedback">
-              <span id="password-text">Password strength</span>
-              <span id="password-requirements">8+ characters</span>
+            <div class="error-message" id="brochureFile-error">Please upload your brand brochure</div>
+            
+            <div class="file-preview" id="filePreview">
+              <div class="file-info">
+                <div class="file-details">
+                  <div class="file-icon">
+                    <i class="fas fa-file"></i>
+                  </div>
+                  <div class="file-meta">
+                    <h4 id="fileName"></h4>
+                    <p id="fileSize"></p>
+                  </div>
+                </div>
+                <button type="button" class="delete-file" id="deleteFile" title="Remove file">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="confirm-password">Confirm Password</label>
-          <div class="password-field">
-            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
-            <button type="button" class="toggle-confirm-password" toggle="#confirm-password" aria-label="Toggle password visibility">
-              <i class="far fa-eye"></i>
-            </button>
-          </div>
+        <!-- Navigation Buttons -->
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+            <i class="fas fa-arrow-left"></i>
+            Previous
+          </button>
+          <button type="button" class="btn btn-primary" id="nextBtn">
+            Next
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">
+            Create Account
+            <i class="fas fa-check"></i>
+          </button>
         </div>
-
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="terms" required>
-          <label class="form-check-label" for="terms">
-            I've read and accept the <a href="#" tabindex="0">Terms & Conditions</a> and <a href="#" tabindex="0">Privacy Policy</a>
-          </label>
-        </div>
-
-        <button type="submit" class="btn-signup">Create Account</button>
-        
-        <div class="footer-links">
-          Already have an account? <a href="#" tabindex="0">Sign In</a>
-        </div>
-        
-        <a href="#" class="back-to-website" tabindex="0">
-          <i class="fas fa-arrow-left"></i>
-          <span>Back to website</span>
-        </a>
       </form>
     </div>
   </div>
 </div>
 
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+  <div class="modal-content">
+    <div class="modal-icon">
+      <i class="fas fa-hourglass-half"></i> <!-- Changed to waiting icon -->
+    </div>
+    <h3 class="modal-title">Submission Received!</h3>
+    <p class="modal-text">
+      Thank you for submitting your brand details. Our team will review your information within 24 hours and get back to you shortly.
+    </p>
+    <a href="/dashboard" class="modal-close" id="modalClose">Get Back</a> <!-- Updated button to link -->
+  </div>
+</div>
+
+
 <script>
-  // Password visibility toggle
-  document.querySelectorAll(".toggle-password, .toggle-confirm-password").forEach(button => {
-    button.addEventListener("click", function() {
-      const passwordInput = document.querySelector(this.getAttribute("toggle"));
-      const passwordType = passwordInput.getAttribute("type");
-      const newType = passwordType === "password" ? "text" : "password";
-      
-      passwordInput.setAttribute("type", newType);
-      
-      // Toggle icon
-      const icon = this.querySelector("i");
-      icon.classList.toggle("fa-eye");
-      icon.classList.toggle("fa-eye-slash");
-    });
-  });
-  
-  // Password strength meter
-  const passwordInput = document.getElementById("password");
-  const meter = document.getElementById("password-meter");
-  const passwordText = document.getElementById("password-text");
-  
-  passwordInput.addEventListener("input", function() {
-    const val = this.value;
-    const strength = checkPasswordStrength(val);
+document.addEventListener('DOMContentLoaded', function() {
+    let currentStep = 1;
+    const totalSteps = 3;
     
-    // Remove all classes first
-    meter.className = "password-strength-meter";
-    
-    if (val.length === 0) {
-      meter.style.width = "0";
-      passwordText.textContent = "Password strength";
-    } else if (strength < 2) {
-      meter.classList.add("strength-weak");
-      passwordText.textContent = "Weak";
-    } else if (strength < 3) {
-      meter.classList.add("strength-fair");
-      passwordText.textContent = "Fair";
-    } else if (strength < 4) {
-      meter.classList.add("strength-good");
-      passwordText.textContent = "Good";
-    } else {
-      meter.classList.add("strength-strong");
-      passwordText.textContent = "Strong";
-    }
-  });
-  
-  function checkPasswordStrength(password) {
-    let strength = 0;
-    
-    // Length check
-    if (password.length >= 8) strength += 1;
-    
-    // Lowercase letters check
-    if (/[a-z]/.test(password)) strength += 1;
-    
-    // Uppercase letters check
-    if (/[A-Z]/.test(password)) strength += 1;
-    
-    // Numbers check
-    if (/[0-9]/.test(password)) strength += 1;
-    
-    // Special characters check
-    if (/[^A-Za-z0-9]/.test(password)) strength += 1;
-    
-    return strength;
-  }
-  
-  // Form submission handler with loading state
-  document.getElementById("signup-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    
-    const submitBtn = this.querySelector('.btn-signup');
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
-    
-    // Password match validation
-    if (password !== confirmPassword) {
-      alert("Passwords don't match! Please check and try again.");
-      return false;
-    }
-    
-    // Add loading state
-    submitBtn.classList.add('loading');
-    submitBtn.disabled = true;
-    
-    // Simulate form submission
-    setTimeout(() => {
-      submitBtn.classList.remove('loading');
-      submitBtn.disabled = false;
-      console.log("Account created successfully");
-      // Add your actual form submission logic here
-    }, 2000);
-  });
+    // Form elements
+    const form = document.getElementById('signup-form');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const fileUpload = document.getElementById('fileUpload');
+    const fileInput = document.getElementById('brochureFile');
+    const filePreview = document.getElementById('filePreview');
+    const deleteFileBtn = document.getElementById('deleteFile');
+    const modal = document.getElementById('successModal');
+    const modalClose = document.getElementById('modalClose');
 
-  // Prevent zoom on iOS when focusing inputs
-  if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]').forEach(input => {
-      input.addEventListener('focus', function() {
-        this.style.fontSize = '16px';
-      });
-    });
-  }
+    // Initialize form
+    updateStepNavigation();
+    updateButtons();
 
-  // Keyboard navigation improvements
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' && e.target.type !== 'submit') {
-      const form = e.target.closest('form');
-      const inputs = Array.from(form.querySelectorAll('input, button'));
-      const currentIndex = inputs.indexOf(e.target);
-      const nextInput = inputs[currentIndex + 1];
-      
-      if (nextInput) {
-        nextInput.focus();
+    // Step navigation
+    function updateStepNavigation() {
+        const stepItems = document.querySelectorAll('.step-nav-item');
+        const connectors = document.querySelectorAll('.step-connector');
+        
+        stepItems.forEach((item, index) => {
+            const stepNumber = index + 1;
+            item.classList.remove('active', 'completed');
+            
+            if (stepNumber < currentStep) {
+                item.classList.add('completed');
+            } else if (stepNumber === currentStep) {
+                item.classList.add('active');
+            }
+        });
+
+        connectors.forEach((connector, index) => {
+            connector.classList.remove('completed');
+            if (index + 1 < currentStep) {
+                connector.classList.add('completed');
+            }
+        });
+    }
+
+    function updateButtons() {
+        // Show/hide navigation buttons
+        prevBtn.style.display = currentStep === 1 ? 'none' : 'inline-flex';
+        nextBtn.style.display = currentStep === totalSteps ? 'none' : 'inline-flex';
+        submitBtn.style.display = currentStep === totalSteps ? 'inline-flex' : 'none';
+        
+        // Update form steps visibility
+        const formSteps = document.querySelectorAll('.form-step');
+        formSteps.forEach((step, index) => {
+            step.classList.remove('active');
+            if (index + 1 === currentStep) {
+                step.classList.add('active');
+            }
+        });
+    }
+
+    // Form validation
+    function validateStep(step) {
+        const currentStepElement = document.querySelector(`.form-step[data-step="${step}"]`);
+        const inputs = currentStepElement.querySelectorAll('input[required], select[required]');
+        let isValid = true;
+
+        inputs.forEach(input => {
+            const errorElement = document.getElementById(`${input.id}-error`);
+            
+            // Clear previous error states
+            input.classList.remove('error');
+            if (errorElement) {
+                errorElement.classList.remove('show');
+            }
+
+            // Validate input
+            let inputValid = true;
+            
+            if (input.type === 'tel') {
+                // Basic phone validation
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                inputValid = phoneRegex.test(input.value.trim());
+            } else if (input.type === 'text') {
+                inputValid = input.value.trim().length >= 2;
+            } else if (input.type === 'file') {
+                inputValid = input.files && input.files.length > 0;
+            } else {
+                inputValid = input.value.trim() !== '';
+            }
+
+            if (!inputValid) {
+                input.classList.add('error');
+                if (errorElement) {
+                    errorElement.classList.add('show');
+                }
+                isValid = false;
+            }
+        });
+
+        return isValid;
+    }
+
+    // File upload functionality
+    fileUpload.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    fileUpload.addEventListener('dragover', (e) => {
         e.preventDefault();
-      }
+        fileUpload.classList.add('dragover');
+    });
+
+    fileUpload.addEventListener('dragleave', () => {
+        fileUpload.classList.remove('dragover');
+    });
+
+    fileUpload.addEventListener('drop', (e) => {
+        e.preventDefault();
+        fileUpload.classList.remove('dragover');
+        
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            handleFileSelect(files[0]);
+        }
+    });
+
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files.length > 0) {
+            handleFileSelect(e.target.files[0]);
+        }
+    });
+
+    function handleFileSelect(file) {
+        // Validate file size (50MB limit)
+        const maxSize = 50 * 1024 * 1024; // 50MB in bytes
+        if (file.size > maxSize) {
+            alert('File size exceeds 50MB limit. Please choose a smaller file.');
+            return;
+        }
+
+        // Validate file type by MIME or extension
+        const allowedTypes = [
+            'application/pdf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'image/jpeg',
+            'image/jpg',
+            'image/png'
+        ];
+        const allowedExtensions = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png'];
+        const fileTypeValid = allowedTypes.includes(file.type);
+        const fileName = file.name || '';
+        const fileExtValid = allowedExtensions.some(ext => fileName.toLowerCase().endsWith(ext));
+        if (!fileTypeValid && !fileExtValid) {
+            alert('Please upload a valid file format (PDF, DOC, DOCX, JPG, PNG).');
+            return;
+        }
+
+        // Update file preview
+        document.getElementById('fileName').textContent = file.name;
+        document.getElementById('fileSize').textContent = formatFileSize(file.size);
+        
+        // Update file icon based on type or extension
+        const fileIcon = document.querySelector('.file-icon i');
+        if (file.type.includes('pdf') || fileName.toLowerCase().endsWith('.pdf')) {
+            fileIcon.className = 'fas fa-file-pdf';
+        } else if (
+            file.type.includes('word') ||
+            file.type.includes('document') ||
+            fileName.toLowerCase().endsWith('.doc') ||
+            fileName.toLowerCase().endsWith('.docx')
+        ) {
+            fileIcon.className = 'fas fa-file-word';
+        } else if (
+            file.type.includes('image') ||
+            fileName.toLowerCase().endsWith('.jpg') ||
+            fileName.toLowerCase().endsWith('.jpeg') ||
+            fileName.toLowerCase().endsWith('.png')
+        ) {
+            fileIcon.className = 'fas fa-file-image';
+        } else {
+            fileIcon.className = 'fas fa-file';
+        }
+
+        filePreview.classList.add('show');
+        
+        // Clear any previous error
+        const errorElement = document.getElementById('brochureFile-error');
+        if (errorElement) {
+            errorElement.classList.remove('show');
+        }
+        fileInput.classList.remove('error');
     }
-  });
+
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    deleteFileBtn.addEventListener('click', () => {
+        fileInput.value = '';
+        filePreview.classList.remove('show');
+    });
+
+    // Navigation button events
+    nextBtn.addEventListener('click', () => {
+        if (validateStep(currentStep)) {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateStepNavigation();
+                updateButtons();
+            }
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentStep > 1) {
+            currentStep--;
+            updateStepNavigation();
+            updateButtons();
+        }
+    });
+
+    // Form submission
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (!validateStep(currentStep)) {
+            return;
+        }
+
+        // Show loading state
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+
+        // Simulate form submission delay
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+        // Collect form data
+        const formData = new FormData(form);
+        
+        // Here you would typically send the data to your server
+        console.log('Form submitted with data:', Object.fromEntries(formData));
+
+        // Show success modal
+        modal.classList.add('show');
+        
+        // Reset loading state
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+    });
+
+    // Modal close event
+    modalClose.addEventListener('click', () => {
+        modal.classList.remove('show');
+        // Optionally redirect or reset form
+        // window.location.href = '/dashboard';
+    });
+
+    // Close modal on backdrop click
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
+
+    // Prevent iOS zoom on input focus
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.style.fontSize = '16px';
+            });
+        });
+    }
+
+    // Auto-format phone numbers
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    phoneInputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0 && !value.startsWith('91')) {
+                value = '91' + value;
+            }
+            if (value.length > 12) {
+                value = value.substr(0, 12);
+            }
+            
+            // Format as +91 XXXXX XXXXX
+            if (value.length >= 2) {
+                value = '+' + value.substr(0, 2) + ' ' + value.substr(2, 5) + ' ' + value.substr(7);
+            }
+            
+            e.target.value = value.trim();
+        });
+    });
+
+    // Real-time validation feedback
+    const allInputs = document.querySelectorAll('input[required], select[required]');
+    allInputs.forEach(input => {
+        input.addEventListener('blur', () => {
+            const errorElement = document.getElementById(`${input.id}-error`);
+            
+            let isValid = true;
+            if (input.type === 'tel') {
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                isValid = phoneRegex.test(input.value.trim());
+            } else if (input.type === 'text') {
+                isValid = input.value.trim().length >= 2;
+            } else if (input.type === 'file') {
+                isValid = input.files && input.files.length > 0;
+            } else {
+                isValid = input.value.trim() !== '';
+            }
+
+            if (isValid) {
+                input.classList.remove('error');
+                if (errorElement) {
+                    errorElement.classList.remove('show');
+                }
+            }
+        });
+    });
+});
 </script>
 
     <!-- Warning Section Starts -->
