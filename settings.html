@@ -35,312 +35,7 @@
     <!-- morris chart -->
     <link rel="stylesheet" type="text/css" href="assets/css/morris.js/css/morris.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-         <style>       
- .frlm-settings-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .frlm-settings-header {
-      background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-      color: white;
-      padding: 20px;
-      border-radius: 10px 10px 0 0;
-      margin-bottom: 0;
-      text-align: center;
-      font-weight: 600;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .frlm-settings-form-section {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 0 0 10px 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-      border: 1px solid #e9ecef;
-    }
-    
-    .frlm-settings-section-title {
-      border-bottom: 2px solid #007bff;
-      padding-bottom: 8px;
-      margin-bottom: 25px;
-      color: #495057;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-    }
-    
-    .frlm-settings-section-title i {
-      margin-right: 12px;
-      color: #007bff;
-    }
-    
-    .frlm-settings-input {
-      transition: all 0.3s;
-      border: 1px solid #ced4da;
-      padding: 10px 15px;
-      height: auto;
-    }
-    
-    .frlm-settings-input:focus {
-      border-color: #80bdff;
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    }
-    
-    .frlm-settings-label {
-      font-weight: 500;
-      color: #495057;
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-    }
-    
-    .frlm-settings-label i {
-      margin-right: 10px;
-      width: 20px;
-      text-align: center;
-      color: #6c757d;
-    }
-    
-    .frlm-settings-submit-btn {
-      padding: 12px 45px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s;
-      font-size: 1.1rem;
-    }
-    
-    .frlm-settings-submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
-    
-    .frlm-settings-file-input-wrapper {
-      position: relative;
-      overflow: hidden;
-      display: inline-block;
-      cursor: pointer;
-    }
-    
-    .frlm-settings-file-btn {
-      border: 1px solid #ced4da;
-      color: #6c757d;
-      background-color: #f8f9fa;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-size: 16px;
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-    }
-    
-    .frlm-settings-file-btn i {
-      margin-right: 10px;
-    }
-    
-    .frlm-settings-file-btn:hover {
-      background-color: #e2e6ea;
-    }
-    
-    .frlm-settings-file-input {
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-    }
-    
-    .frlm-settings-brochure-preview {
-      margin-top: 20px;
-      padding: 20px;
-      border: 1px dashed #ced4da;
-      border-radius: 5px;
-      background-color: #f8f9fa;
-    }
-    
-    .frlm-settings-testimonial-group {
-      position: relative;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 5px;
-      background-color: #f8f9fa;
-      transition: all 0.3s;
-    }
-    
-    .frlm-settings-testimonial-group:hover {
-      background-color: #e9ecef;
-    }
-    
-    .frlm-settings-testimonial-group .input-group-text {
-      padding: 0 15px;
-    }
-    
-    .frlm-settings-remove-btn {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      width: 28px;
-      height: 28px;
-      font-size: 16px;
-      line-height: 23px;
-      text-align: center;
-      border-radius: 50%;
-    }
-    
-    /* Brand Image Preview Styles */
-    .frlm-settings-image-preview {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 20px;
-      margin-top: 20px;
-    }
-    
-    .frlm-settings-image-card {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      background: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    
-    .frlm-settings-image-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-    
-    .frlm-settings-image-container {
-      height: 180px;
-      overflow: hidden;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
-    }
-    
-    .frlm-settings-image-thumb {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-    }
-    
-    .frlm-settings-image-details {
-      padding: 12px;
-      text-align: center;
-      background-color: #f8f9fa;
-      border-top: 1px solid #eee;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    
-    .frlm-settings-image-filename {
-      font-size: 0.85rem;
-      color: #495057;
-      margin: 0;
-    }
-    
-    .frlm-settings-remove-image {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(220, 53, 69, 0.8);
-      color: white;
-      border-radius: 50%;
-      width: 28px;
-      height: 28px;
-      font-size: 14px;
-      line-height: 28px;
-      text-align: center;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .frlm-settings-image-card:hover .frlm-settings-remove-image {
-      opacity: 1;
-    }
-    
-    .frlm-settings-action-buttons {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-    
-    .frlm-settings-link-input {
-      position: relative;
-      margin-bottom: 20px;
-    }
-    
-    .frlm-settings-link-icon {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #6c757d;
-    }
-    
-    .frlm-settings-link-field {
-      padding-left: 45px;
-    }
-    
-    /* Year dropdown styling */
-    .frlm-settings-year-select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23495057' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 12px center;
-      background-size: 16px 12px;
-      padding-right: 35px !important;
-    }
-    
-    /* Improved spacing for form groups */
-    .frlm-settings-form-group {
-      margin-bottom: 25px;
-    }
-    
-    /* Add button styling */
-    .frlm-settings-add-btn {
-      padding: 8px 20px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s;
-    }
-    
-    .frlm-settings-add-btn:hover {
-      transform: translateY(-2px);
-    }
-    
-    /* Input group styling */
-    .input-group .form-control:not(:first-child) {
-      border-left: 0;
-    }
-    
-    @media (max-width: 767px) {
-      .frlm-settings-image-preview {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      }
-      
-      .frlm-settings-image-container {
-        height: 140px;
-      }
-      
-      .frlm-settings-form-section {
-        padding: 20px 15px;
-      }
-    }
-  </style>
+
 </head>
 
 <body>
@@ -370,7 +65,7 @@
                     <div class="circle"></div>
                 </div>
             </div>
-            
+
             <div class="spinner-layer spinner-yellow">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
@@ -382,7 +77,7 @@
                     <div class="circle"></div>
                 </div>
             </div>
-            
+
             <div class="spinner-layer spinner-green">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
@@ -425,13 +120,13 @@
                         <i class="ti-more"></i>
                     </a>
                 </div>
-            
+
                 <div class="navbar-container container-fluid">
                     <ul class="nav-left">
                         <li>
                             <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
                         </li>
-                        
+
                         <li>
                             <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
                                 <i class="ti-fullscreen"></i>
@@ -489,7 +184,7 @@
                             </a>
                             <ul class="show-notification profile-notification">
                                 <li class="waves-effect waves-light">
-                                    <a href="#!">
+                                    <a href="settings.html">
                                         <i class="ti-settings"></i> Settings
                                     </a>
                                 </li>
@@ -504,7 +199,7 @@
                 </div>
             </div>
         </nav>
-    
+
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
                 <nav class="pcoded-navbar">
@@ -517,8 +212,8 @@
                                     <span id="more-details">Naturals</span>
                                 </div>
                             </div>
-                    
-                       
+
+
                         <div class="pcoded-navigation-label" data-i18n="nav.category.navigation"></div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="">
@@ -533,6 +228,13 @@
                             <a href="leads.html" class="waves-effect waves-dark">
                                 <span class="pcoded-micon"><i class="ti-user"></i></span>
                                 <span class="pcoded-mtext">Leads</span>
+                                <span class="pcoded-mcaret"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="franchiselocation.html" class="waves-effect waves-dark">
+                                <span class="pcoded-micon"><i class="ti-pin"></i></span>
+                                <span class="pcoded-mtext">Locations</span>
                                 <span class="pcoded-mcaret"></span>
                             </a>
                         </li>
@@ -557,470 +259,1393 @@
                                         <p class="m-b-0"></p>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <ul class="breadcrumb-title">
-                                        <li class="breadcrumb-item">
-                                            <a href="index.html"> <i class="fa fa-home"></i> </a>
-                                        </li>
-                                        <li class="breadcrumb-item"><a href="#!">Pages</a>
-                                        </li>
-                                        <li class="breadcrumb-item"><a href="#!">Sample Page</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
                     <!-- Page-header end -->
-   
 
-  <div class="container-fluid py-4 frlm-settings-container">
-    <h2 class="frlm-settings-header mb-0">Franchise Settings</h2>
-    
-    <form id="frlm-settings-form" class="frlm-settings-form-section">
-      <!-- Basic Information Section -->
-      <h4 class="frlm-settings-section-title"><i class="fas fa-info-circle"></i>Basic Information</h4>
-      <div class="row g-3 mb-4">
-        <div class="col-md-6">
-          <label for="frlm-settings-brandName" class="frlm-settings-label">Brand Name</label>
-          <input type="text" class="form-control frlm-settings-input" id="frlm-settings-brandName" name="frlm-settings-brandName" required />
-        </div>
-        <div class="col-md-6">
-          <label for="frlm-settings-founderName" class="frlm-settings-label">Founder/MD Name</label>
-          <input type="text" class="form-control frlm-settings-input" id="frlm-settings-founderName" name="frlm-settings-founderName" required />
-        </div>
-      </div>
+                    <style>
+                      :root {
+                          --primary-blue: #007bff;
+                          --primary-blue-dark: #0056b3;
+                          --primary-blue-light: #b3d9ff;
+                          --secondary-gray: #6c757d;
+                          --light-gray: #f8f9fa;
+                          --border-color: #e9ecef;
+                          --success-color: #28a745;
+                          --danger-color: #dc3545;
+                          --warning-color: #ffc107;
+                          --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+                          --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+                          --border-radius: 12px;
+                          --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                      }
 
-      <div class="mb-4">
-        <label for="frlm-settings-brandAddress" class="frlm-settings-label">Brand Address</label>
-        <input type="text" class="form-control frlm-settings-input" id="frlm-settings-brandAddress" name="frlm-settings-brandAddress" required />
-      </div>
 
-      <div class="row g-4 mb-4">
-        <div class="col-md-4 frlm-settings-form-group">
-          <label for="frlm-settings-brandYear" class="frlm-settings-label">
-            <i class="fas fa-calendar-alt"></i>Year of Establishment
-          </label>
-          <select class="form-select frlm-settings-input frlm-settings-year-select" id="frlm-settings-brandYear" name="frlm-settings-brandYear" required>
-            <option value="">Select Year</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="frlm-settings-phoneNumber" class="frlm-settings-label"><i class="fas fa-phone me-2"></i>Phone Number (+91)</label>
-          <input type="text" class="form-control frlm-settings-input frlm-settings-phone" id="frlm-settings-phoneNumber" name="frlm-settings-phoneNumber" maxlength="10" placeholder="10-digit mobile" required />
-        </div>
-        <div class="col-md-4">
-          <label for="frlm-settings-whatsappNumber" class="frlm-settings-label"><i class="fab fa-whatsapp me-2"></i>WhatsApp Number (+91)</label>
-          <input type="text" class="form-control frlm-settings-input frlm-settings-whatsapp" id="frlm-settings-whatsappNumber" name="frlm-settings-whatsappNumber" maxlength="10" placeholder="10-digit mobile" required />
-        </div>
-      </div>
 
-      <!-- Brochure Upload Section -->
-      <h4 class="frlm-settings-section-title"><i class="fas fa-file-pdf me-2"></i>Brochure</h4>
-      <div class="mb-4">
-        <label class="frlm-settings-label d-block">Upload Brochure (Max 25MB)</label>
-        <div class="frlm-settings-file-input-wrapper">
-          <div class="frlm-settings-file-btn">
-            <i class="fas fa-upload me-2"></i>Choose File
-          </div>
-          <input type="file" class="frlm-settings-file-input" id="frlm-settings-brochureFile" accept="application/pdf,image/*" />
-        </div>
-        <div id="frlm-settings-brochurePreview" class="frlm-settings-brochure-preview d-none">
-          <!-- Preview will be injected here -->
-        </div>
-      </div>
+                      .dashboard-header {
+                          background: white;
+                          border-radius: var(--border-radius);
+                          box-shadow: var(--shadow-sm);
+                          margin-bottom: 30px;
+                          overflow: hidden;
+                      }
 
-      <!-- Brand Images Section -->
-      <h4 class="frlm-settings-section-title"><i class="fas fa-images me-2"></i>Brand Images</h4>
-      <div class="mb-4">
-        <label class="frlm-settings-label d-block">Upload Brand Images (Max 5, 25MB each)</label>
-        <div class="frlm-settings-file-input-wrapper">
-          <div class="frlm-settings-file-btn">
-            <i class="fas fa-images me-2"></i>Select Images
-          </div>
-          <input type="file" class="frlm-settings-file-input" id="frlm-settings-brandImages" accept="image/*" multiple />
-        </div>
-        
-        <div id="frlm-settings-imagePreview" class="frlm-settings-image-preview">
-          <!-- Image cards will be injected here -->
-        </div>
-        
-        <div class="frlm-settings-action-buttons">
-          <button type="button" class="btn btn-warning btn-sm" id="frlm-settings-clearImages">
-            <i class="fas fa-trash-alt me-2"></i>Clear All Images
-          </button>
-          <span class="text-muted"><small id="frlm-settings-imageCounter">0/5 images uploaded</small></span>
-        </div>
-      </div>
+                      .header-gradient {
+                          background: linear-gradient(135deg, var(--primary-blue) 0%, #0056b3 100%);
+                          color: white;
+                          padding: 30px;
+                          text-align: center;
+                          position: relative;
+                      }
 
-      <!-- Social Links Section -->
-      <h4 class="frlm-settings-section-title"><i class="fas fa-link me-2"></i>Social Links</h4>
-      <div class="mb-4">
-        <div class="mb-3 frlm-settings-link-input">
-          <label for="frlm-settings-websiteLink" class="frlm-settings-label">Brand Website</label>
-          <i class="fas fa-globe frlm-settings-link-icon"></i>
-          <input type="url" class="form-control frlm-settings-input frlm-settings-link-field" id="frlm-settings-websiteLink" name="frlm-settings-websiteLink" placeholder="https://yourbrand.com" />
-        </div>
-        <div class="mb-3 frlm-settings-link-input">
-          <label for="frlm-settings-instagramLink" class="frlm-settings-label">Instagram</label>
-          <i class="fab fa-instagram frlm-settings-link-icon"></i>
-          <input type="url" class="form-control frlm-settings-input frlm-settings-link-field" id="frlm-settings-instagramLink" name="frlm-settings-instagramLink" placeholder="https://instagram.com/yourbrand" />
-        </div>
-        <div class="mb-3 frlm-settings-link-input">
-          <label for="frlm-settings-youtubeLink" class="frlm-settings-label">YouTube</label>
-          <i class="fab fa-youtube frlm-settings-link-icon"></i>
-          <input type="url" class="form-control frlm-settings-input frlm-settings-link-field" id="frlm-settings-youtubeLink" name="frlm-settings-youtubeLink" placeholder="https://youtube.com/c/yourbrand" />
-        </div>
-      </div>
+                      .header-gradient::before {
+                          content: '';
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          right: 0;
+                          bottom: 0;
+                          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+                          pointer-events: none;
+                      }
 
-      <!-- Testimonial Links Section -->
-      <h4 class="frlm-settings-section-title"><i class="fas fa-quote-right me-2"></i>Testimonial Links</h4>
-      <div id="frlm-settings-testimonialLinks" class="mb-3">
-        <!-- Testimonial inputs will be injected here -->
-      </div>
-      <button type="button" class="btn btn-outline-secondary btn-sm" id="frlm-settings-addTestimonial">
-        <i class="fas fa-plus me-2"></i>Add More
-      </button>
+                      .header-content {
+                          position: relative;
+                          z-index: 1;
+                      }
 
-      <!-- Submit Button -->
-      <div class="text-center mt-5">
-        <button type="submit" class="btn btn-primary frlm-settings-submit-btn">
-          Save Settings
-        </button>
-      </div>
-    </form>
-  </div>
+                      .dashboard-title {
+                          margin: 0;
+                          font-size: 2rem;
+                          font-weight: 700;
+                          letter-spacing: -0.5px;
+                      }
 
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById("frlm-settings-form");
-      const testimonialContainer = document.getElementById("frlm-settings-testimonialLinks");
-      const brochureFile = document.getElementById("frlm-settings-brochureFile");
-      const brochurePreview = document.getElementById("frlm-settings-brochurePreview");
-      const brandImageInput = document.getElementById("frlm-settings-brandImages");
-      const brandImagePreview = document.getElementById("frlm-settings-imagePreview");
-      const imageCounter = document.getElementById("frlm-settings-imageCounter");
-      const clearImagesBtn = document.getElementById("frlm-settings-clearImages");
-      const addTestimonialBtn = document.getElementById("frlm-settings-addTestimonial");
-      
-      // Storage key for our application
-      const STORAGE_KEY = "frlm-settings-data";
-      
-      // Add testimonial input field
-      function addTestimonial(value = "") {
-        const wrapper = document.createElement("div");
-        wrapper.className = "frlm-settings-testimonial-group";
-        wrapper.innerHTML = `
-          <div class="input-group">
-            <span class="input-group-text"><i class="fas fa-quote-left"></i></span>
-            <input type="url" class="form-control frlm-settings-input" name="frlm-settings-testimonialLinks" 
-              value="${value}" placeholder="Testimonial URL (YouTube, Instagram, etc.)">
-            <button type="button" class="btn btn-danger frlm-settings-remove-btn" onclick="removeTestimonial(this)">×</button>
-          </div>
-        `;
-        testimonialContainer.appendChild(wrapper);
-      }
-      
-      // Remove testimonial
-      window.removeTestimonial = function(button) {
-        button.closest('.frlm-settings-testimonial-group').remove();
-      };
-      
-      // Populate year dropdown (1980-current year)
-      function populateYearDropdown() {
-        const yearSelect = form.elements["frlm-settings-brandYear"];
-        const currentYear = new Date().getFullYear();
-        for (let y = currentYear; y >= 1980; y--) {
-          const option = document.createElement("option");
-          option.value = y;
-          option.textContent = y;
-          yearSelect.appendChild(option);
-        }
-      }
-      
-      // Get filename from path or data URL
-      function getFileName(path) {
-        // For data URLs, create a friendly name
-        if (path.startsWith('data:')) {
-          const fileType = path.split(';')[0].split('/')[1];
-          return `Image-${new Date().getTime()}.${fileType}`;
-        }
-        
-        // For regular paths
-        return path.split('\\').pop().split('/').pop();
-      }
-      
-      // Update image counter
-      function updateImageCounter() {
-        const imageCount = document.querySelectorAll('.frlm-settings-image-card').length;
-        imageCounter.textContent = `${imageCount}/5 images uploaded`;
-      }
-      
-      // Load saved data from localStorage
-      function loadFromStorage() {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-        if (!saved) {
-          addTestimonial();
-          return;
-        }
-        
-        // Fill form fields
-        for (const [key, value] of Object.entries(saved)) {
-          if (key === "frlm-settings-testimonialLinks") {
-            // Create testimonial input fields with saved values
-            if (Array.isArray(value) && value.length > 0) {
-              value.forEach((link) => addTestimonial(link));
-            } else {
-              addTestimonial();
-            }
-          } else if (key === "frlm-settings-brandImages") {
-            // Create image cards for saved images
-            if (Array.isArray(value) && value.length > 0) {
-              value.forEach((imageData, index) => {
-                addImageCard(imageData, `Image-${index + 1}`);
-              });
-              updateImageCounter();
-            }
-          } else if (form.elements[key]) {
-            form.elements[key].value = value;
-          }
-        }
-        
-        // Handle brochure preview
-        if (saved.brochureName && saved.brochureURL) {
-          displayBrochurePreview(saved.brochureURL, saved.brochureName);
-        }
-      }
-      
-      // Display brochure preview
-      function displayBrochurePreview(url, name) {
-        brochurePreview.innerHTML = `
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center">
-              <i class="fas fa-file-pdf fs-3 text-danger me-3"></i>
-              <div>
-                <strong>${name}</strong>
-                <small class="d-block text-muted">Click download to save the file</small>
-              </div>
-            </div>
-            <div>
-              <a href="${url}" download="${name}" class="btn btn-sm btn-info">
-                <i class="fas fa-download me-1"></i>Download
-              </a>
-              <button type="button" class="btn btn-sm btn-danger ms-2" id="frlm-settings-removeBrochure">
-                <i class="fas fa-trash-alt"></i>
-              </button>
-            </div>
-          </div>
-        `;
-        brochurePreview.classList.remove('d-none');
-        
-        // Add event listener for remove button
-        document.getElementById('frlm-settings-removeBrochure').addEventListener('click', function() {
-          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-          delete saved.brochureName;
-          delete saved.brochureURL;
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-          brochurePreview.innerHTML = '';
-          brochurePreview.classList.add('d-none');
-          brochureFile.value = '';
-        });
-      }
-      
-      // Add image card to preview
-      function addImageCard(imageUrl, customFileName = null) {
-        const fileName = customFileName || getFileName(imageUrl);
-        const card = document.createElement('div');
-        card.className = 'frlm-settings-image-card';
-        card.dataset.src = imageUrl;
-        
-        card.innerHTML = `
-          <div class="frlm-settings-image-container">
-            <img src="${imageUrl}" class="frlm-settings-image-thumb" alt="${fileName}">
-          </div>
-          <div class="frlm-settings-image-details">
-            <p class="frlm-settings-image-filename" title="${fileName}">${fileName}</p>
-          </div>
-          <span class="frlm-settings-remove-image" title="Remove image">×</span>
-        `;
-        
-        // Add event listener for remove button
-        const removeBtn = card.querySelector('.frlm-settings-remove-image');
-        removeBtn.addEventListener('click', function() {
-          removeImage(card);
-        });
-        
-        brandImagePreview.appendChild(card);
-        updateImageCounter();
-      }
-      
-      // Remove image
-      function removeImage(card) {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-        const imageUrl = card.dataset.src;
-        
-        if (saved["frlm-settings-brandImages"]) {
-          saved["frlm-settings-brandImages"] = saved["frlm-settings-brandImages"].filter(url => url !== imageUrl);
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-        }
-        
-        card.remove();
-        updateImageCounter();
-      }
-      
-      // Clear all images
-      function clearAllImages() {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-        saved["frlm-settings-brandImages"] = [];
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-        
-        brandImagePreview.innerHTML = '';
-        updateImageCounter();
-      }
-      
-      // Form submission handler
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        
-        // Create data object from form fields
-        const data = {};
-        [...form.elements].forEach((el) => {
-          if (el.name && el.name !== "frlm-settings-testimonialLinks" && el.type !== "file") {
-            data[el.name] = el.value;
-          }
-        });
-        
-        // Get testimonial links
-        const testimonialLinks = [...document.querySelectorAll('[name="frlm-settings-testimonialLinks"]')]
-          .map((input) => input.value)
-          .filter((link) => link.trim() !== "");
-        data["frlm-settings-testimonialLinks"] = testimonialLinks;
-        
-        // Get image sources
-        const imageSources = [...document.querySelectorAll('.frlm-settings-image-card')]
-          .map(card => card.dataset.src);
-        data["frlm-settings-brandImages"] = imageSources;
-        
-        // Get existing brochure data
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-        if (saved.brochureName && saved.brochureURL) {
-          data.brochureName = saved.brochureName;
-          data.brochureURL = saved.brochureURL;
-        }
-        
-        // Save to localStorage
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-        
-        // Show success message
-        const alertDiv = document.createElement('div');
-        alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
-        alertDiv.role = 'alert';
-        alertDiv.innerHTML = `
-          <strong><i class="fas fa-check-circle me-2"></i>Success!</strong> Your settings have been saved successfully.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        `;
-        form.appendChild(alertDiv);
-        
-        // Scroll to success message
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: 'smooth'
-        });
-        
-        // Remove alert after 3 seconds
-        setTimeout(() => {
-          alertDiv.remove();
-        }, 3000);
-      });
-      
-      // Brochure file handler
-      brochureFile.addEventListener("change", function() {
-        const file = this.files[0];
-        if (!file) return;
-        
-        if (file.size > 25 * 1024 * 1024) {
-          alert("File is too large. Maximum size is 25MB.");
-          this.value = "";
-          return;
-        }
-        
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-          saved.brochureName = file.name;
-          saved.brochureURL = e.target.result;
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-          
-          displayBrochurePreview(e.target.result, file.name);
-        };
-        reader.readAsDataURL(file);
-      });
-      
-      // Brand images handler
-      brandImageInput.addEventListener("change", function() {
-        const files = [...this.files];
-        if (files.length === 0) return;
-        
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-        
-        // Initialize array if it doesn't exist
-        if (!saved["frlm-settings-brandImages"]) {
-          saved["frlm-settings-brandImages"] = [];
-        }
-        
-        // Get current image count
-        const currentCount = document.querySelectorAll('.frlm-settings-image-card').length;
-        
-        // Check if adding these files would exceed the 5-image limit
-        if (currentCount + files.length > 5) {
-          alert(`Maximum 5 images allowed. You already have ${currentCount} images.`);
-          this.value = "";
-          return;
-        }
-        
-        // Process each file
-        files.forEach((file) => {
-          if (file.size > 25 * 1024 * 1024) {
-            alert(`File "${file.name}" is too large. Maximum size is 25MB.`);
-            return;
-          }
-          
-          const reader = new FileReader();
-          reader.onload = function(e) {
-            // Add new image to array and preview
-            saved["frlm-settings-brandImages"].push(e.target.result);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-            
-            addImageCard(e.target.result, file.name);
-          };
-          reader.readAsDataURL(file);
-        });
-        
-        // Clear input
-        this.value = "";
-      });
-      
-      // Phone number validation (digits only)
-      document.querySelectorAll(".frlm-settings-phone, .frlm-settings-whatsapp").forEach((input) => {
-        input.addEventListener("input", function() {
-          this.value = this.value.replace(/\D/g, "");
-        });
-      });
-      
-      // Event listeners for buttons
-      clearImagesBtn.addEventListener('click', clearAllImages);
-      addTestimonialBtn.addEventListener('click', () => addTestimonial());
-      
-      // Initialize
-      populateYearDropdown();
-      loadFromStorage();
-    });
-  </script>
+                      .dashboard-subtitle {
+                          margin: 8px 0 0 0;
+                          opacity: 0.9;
+                          font-size: 1.1rem;
+                          font-weight: 400;
+                      }
+
+                      .settings-form {
+                          background: white;
+                          border-radius: var(--border-radius);
+                          box-shadow: var(--shadow-sm);
+                          overflow: hidden;
+                      }
+
+                      .form-section {
+                          padding: 40px;
+                          border-bottom: 1px solid var(--border-color);
+                      }
+
+                      .form-section:last-child {
+                          border-bottom: none;
+                      }
+
+                      .section-header {
+                          display: flex;
+                          align-items: center;
+                          margin-bottom: 30px;
+                          padding-bottom: 15px;
+                          border-bottom: 2px solid var(--primary-blue-light);
+                      }
+
+                      .section-icon {
+                          width: 48px;
+                          height: 48px;
+                          background: var(--primary-blue-light);
+                          border-radius: 12px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin-right: 16px;
+                          color: var(--primary-blue);
+                          font-size: 1.2rem;
+                      }
+
+                      .section-title {
+                          margin: 0;
+                          font-size: 1.5rem;
+                          font-weight: 600;
+                          color: #2c3e50;
+                      }
+
+                      .form-group {
+                          margin-bottom: 24px;
+                      }
+
+                      .form-label {
+                          display: block;
+                          margin-bottom: 8px;
+                          font-weight: 500;
+                          color: #374151;
+                          font-size: 0.95rem;
+                      }
+
+                      .form-control {
+                          width: 100%;
+                          padding: 12px 16px;
+                          border: 2px solid var(--border-color);
+                          border-radius: 8px;
+                          font-size: 1rem;
+                          transition: var(--transition);
+                          background: white;
+                      }
+
+                      .form-control:focus {
+                          outline: none;
+                          border-color: var(--primary-blue);
+                          box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+                      }
+
+                      .form-control:hover {
+                          border-color: #c3cfe2;
+                      }
+
+                      .btn {
+                          padding: 12px 24px;
+                          border-radius: 8px;
+                          font-weight: 500;
+                          font-size: 0.95rem;
+                          transition: var(--transition);
+                          border: none;
+                          cursor: pointer;
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          text-decoration: none;
+                          gap: 8px;
+                      }
+
+                      .btn-primary {
+                          background: var(--primary-blue);
+                          color: white;
+                      }
+
+                      .btn-primary:hover {
+                          background: var(--primary-blue-dark);
+                          transform: translateY(-2px);
+                          box-shadow: var(--shadow-md);
+                      }
+
+                      .btn-outline-primary {
+                          background: transparent;
+                          color: var(--primary-blue);
+                          border: 2px solid var(--primary-blue);
+                      }
+
+                      .btn-outline-primary:hover {
+                          background: var(--primary-blue);
+                          color: white;
+                      }
+
+                      .btn-danger {
+                          background: var(--danger-color);
+                          color: white;
+                      }
+
+                      .btn-danger:hover {
+                          background: #c82333;
+                          transform: translateY(-1px);
+                      }
+
+                      .btn-sm {
+                          padding: 8px 16px;
+                          font-size: 0.85rem;
+                      }
+
+                      .btn-lg {
+                          padding: 16px 32px;
+                          font-size: 1.1rem;
+                          font-weight: 600;
+                      }
+
+                      .file-upload-area {
+                          border: 2px dashed var(--border-color);
+                          border-radius: 12px;
+                          padding: 40px 20px;
+                          text-align: center;
+                          transition: var(--transition);
+                          cursor: pointer;
+                          background: #fafbfc;
+                      }
+
+                      .file-upload-area:hover {
+                          border-color: var(--primary-blue);
+                          background: #f0f8ff;
+                      }
+
+                      .file-upload-area.dragover {
+                          border-color: var(--primary-blue);
+                          background: var(--primary-blue-light);
+                      }
+
+                      .upload-icon {
+                          width: 64px;
+                          height: 64px;
+                          background: var(--primary-blue-light);
+                          border-radius: 50%;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto 16px;
+                          color: var(--primary-blue);
+                          font-size: 1.5rem;
+                      }
+
+                      .file-input {
+                          display: none;
+                      }
+
+                      .image-preview-grid {
+                          display: grid;
+                          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                          gap: 20px;
+                          margin-top: 24px;
+                      }
+
+                      .image-card {
+                          background: white;
+                          border-radius: 12px;
+                          overflow: hidden;
+                          box-shadow: var(--shadow-sm);
+                          transition: var(--transition);
+                          position: relative;
+                      }
+
+                      .image-card:hover {
+                          transform: translateY(-4px);
+                          box-shadow: var(--shadow-md);
+                      }
+
+                      .image-container {
+                          height: 160px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          background: #f8f9fa;
+                          overflow: hidden;
+                      }
+
+                      .image-thumb {
+                          max-width: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                      }
+
+                      .image-info {
+                          padding: 12px;
+                          background: white;
+                          border-top: 1px solid var(--border-color);
+                      }
+
+                      .image-name {
+                          font-size: 0.85rem;
+                          color: var(--secondary-gray);
+                          margin: 0;
+                          white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                      }
+
+                      .remove-image {
+                          position: absolute;
+                          top: 8px;
+                          right: 8px;
+                          width: 32px;
+                          height: 32px;
+                          background: rgba(220, 53, 69, 0.9);
+                          border: none;
+                          border-radius: 50%;
+                          color: white;
+                          cursor: pointer;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          opacity: 0;
+                          transition: var(--transition);
+                      }
+
+                      .image-card:hover .remove-image {
+                          opacity: 1;
+                      }
+
+                      .testimonial-item {
+                          background: #f8f9fa;
+                          border-radius: 12px;
+                          padding: 20px;
+                          margin-bottom: 16px;
+                          position: relative;
+                          transition: var(--transition);
+                          border: 2px solid transparent;
+                      }
+
+                      .testimonial-item:hover {
+                          border-color: var(--primary-blue-light);
+                          background: white;
+                      }
+
+                      .testimonial-header {
+                          display: flex;
+                          align-items: center;
+                          margin-bottom: 16px;
+                      }
+
+                      .testimonial-number {
+                          width: 32px;
+                          height: 32px;
+                          background: var(--primary-blue);
+                          color: white;
+                          border-radius: 50%;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-weight: 600;
+                          font-size: 0.9rem;
+                          margin-right: 12px;
+                      }
+
+                      .remove-testimonial {
+                          position: absolute;
+                          top: 16px;
+                          right: 16px;
+                          background: none;
+                          border: none;
+                          color: var(--danger-color);
+                          cursor: pointer;
+                          padding: 4px;
+                          border-radius: 4px;
+                          transition: var(--transition);
+                      }
+
+                      .remove-testimonial:hover {
+                          background: var(--danger-color);
+                          color: white;
+                      }
+
+                      .social-link-input {
+                          position: relative;
+                      }
+
+                      .social-icon {
+                          position: absolute;
+                          left: 16px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          color: var(--secondary-gray);
+                          z-index: 1;
+                      }
+
+                      .social-input {
+                          padding-left: 48px;
+                      }
+
+                      .save-section {
+                          background: #f8f9fa;
+                          padding: 30px 40px;
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                      }
+
+                      .save-info {
+                          color: var(--secondary-gray);
+                          font-size: 0.9rem;
+                      }
+
+                      .edit-mode-indicator {
+                          background: var(--warning-color);
+                          color: #856404;
+                          padding: 8px 16px;
+                          border-radius: 20px;
+                          font-size: 0.85rem;
+                          font-weight: 500;
+                          display: none;
+                      }
+
+                      .edit-mode .edit-mode-indicator {
+                          display: inline-block;
+                      }
+
+                      .success-message {
+                          background: var(--success-color);
+                          color: white;
+                          padding: 12px 20px;
+                          border-radius: 8px;
+                          margin-bottom: 20px;
+                          display: none;
+                          align-items: center;
+                          gap: 8px;
+                      }
+
+                      .success-message.show {
+                          display: flex;
+                      }
+                      
+
+                      @media (max-width: 768px) {
+                          .dashboard-container {
+                              padding: 0 10px;
+                          }
+
+                          .form-section {
+                              padding: 24px 20px;
+                          }
+
+                          .dashboard-title {
+                              font-size: 1.5rem;
+                          }
+
+                          .section-header {
+                              flex-direction: column;
+                              text-align: center;
+                              align-items: center;
+                          }
+
+                          .section-icon {
+                              margin-right: 0;
+                              margin-bottom: 12px;
+                          }
+
+                          .image-preview-grid {
+                              grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                              gap: 12px;
+                          }
+
+                          .save-section {
+                              flex-direction: column;
+                              gap: 16px;
+                              text-align: center;
+                          }
+                      }
+
+                      @media (max-width: 480px) {
+                          .form-section {
+                              padding: 20px 16px;
+                          }
+
+                          .image-preview-grid {
+                              grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                          }
+
+                          .btn {
+                              width: 100%;
+                          }
+
+                          .save-section .btn {
+                              width: auto;
+                          }
+
+                          .settings-notification {
+                              right: 10px;
+                              left: 10px;
+                              min-width: auto;
+                              transform: translateY(-100px);
+                          }
+
+                          .settings-notification.settings-notification-show {
+                              transform: translateY(0);
+                          }
+                      }
+
+                      /* Notification Styles */
+                      .settings-notification {
+                          position: fixed;
+                          top: 20px;
+                          right: 20px;
+                          padding: 15px 20px;
+                          border-radius: var(--border-radius);
+                          color: white;
+                          font-weight: 500;
+                          z-index: 3000;
+                          transform: translateX(400px);
+                          transition: var(--transition);
+                          min-width: 300px;
+                          box-shadow: var(--shadow-md);
+                          display: flex;
+                          align-items: center;
+                          gap: 10px;
+                      }
+
+                      .settings-notification.settings-notification-show {
+                          transform: translateX(0);
+                      }
+
+                      .settings-notification-success {
+                          background: var(--success-color);
+                      }
+
+                      .settings-notification-error {
+                          background: var(--danger-color);
+                      }
+
+                      .settings-notification-warning {
+                          background: var(--warning-color);
+                          color: var(--dark-color);
+                      }
+
+                      .settings-notification-info {
+                          background: var(--info-color);
+                      }
+                      @media (max-width: 576px) {
+    .form-section {
+      padding: 16px;
+    }
+
+    .section-header {
+      flex-direction: row !important;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      padding-bottom: 10px;
+      gap: 12px;
+    }
+
+    .section-icon {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+    }
+
+    .form-control {
+      font-size: 0.9rem;
+      padding: 10px 14px;
+    }
+
+    .row {
+      flex-direction: column;
+    }
+
+    .col-md-6,
+    .col-md-4 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+
+    .social-link-input {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .social-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: var(--secondary-gray);
+    }
+
+    .social-input {
+      padding-left: 42px;
+    }
+
+    .save-section {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 16px;
+    }
+
+    .save-section .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    #imageCounter {
+      font-size: 0.8rem;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .file-upload-area {
+      padding: 20px 10px;
+    }
+
+    .testimonial-item {
+      padding: 16px;
+    }
+
+    .testimonial-header {
+      flex-direction: row;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .form-control.is-invalid {
+      border-color: var(--danger-color);
+      box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
+    }
+  }
+
+                    </style>
+
+                    <div class="dashboard-container">
+
+
+                      <!-- Success Message -->
+                      <div id="successMessage" class="success-message">
+                          <i class="fas fa-check-circle"></i>
+                          <span>Settings saved successfully!</span>
+                      </div>
+
+                      <!-- Notification container -->
+                      <div id="settingsNotification" class="settings-notification">
+                          <span id="settingsNotificationMessage"></span>
+                      </div>
+
+                      <!-- Main Form -->
+                      <form id="settingsForm" class="settings-form">
+                          <!-- Basic Information -->
+                          <div class="form-section">
+                              <div class="section-header">
+                                  <div class="section-icon">
+                                      <i class="fas fa-info-circle"></i>
+                                  </div>
+                                  <h2 class="section-title">Basic Information</h2>
+                              </div>
+
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label class="form-label">Brand Name *</label>
+                                          <input type="text" class="form-control" id="brandName" required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label class="form-label">Founder/MD Name *</label>
+                                          <input type="text" class="form-control" id="founderName" required>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="form-label">Brand Address *</label>
+                                  <input type="text" class="form-control" id="brandAddress" required>
+                              </div>
+
+                              <div class="row">
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                          <label class="form-label">Year of Establishment *</label>
+                                          <select class="form-control" id="brandYear" required>
+                                              <option value="">Select Year</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                          <label class="form-label">Phone Number (+91) *</label>
+                                          <input type="tel" class="form-control" id="phoneNumber" maxlength="10" placeholder="10-digit mobile" required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                          <label class="form-label">WhatsApp Number (+91) *</label>
+                                          <input type="tel" class="form-control" id="whatsappNumber" maxlength="10" placeholder="10-digit mobile" required>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Brochure Upload -->
+                          <div class="form-section">
+                              <div class="section-header">
+                                  <div class="section-icon">
+                                      <i class="fas fa-file-pdf"></i>
+                                  </div>
+                                  <h2 class="section-title">Brochure</h2>
+                              </div>
+
+                              <div class="file-upload-area" onclick="document.getElementById('brochureFile').click()">
+                                  <div class="upload-icon">
+                                      <i class="fas fa-upload"></i>
+                                  </div>
+                                  <h4>Upload Brochure</h4>
+                                  <p>Drag and drop or click to select (Max 25MB)</p>
+                                  <p><small>Supported formats: PDF, JPG, PNG</small></p>
+                              </div>
+                              <input type="file" id="brochureFile" class="file-input" accept="application/pdf,image/*">
+                              <div id="brochurePreview"></div>
+                          </div>
+
+                          <!-- Brand Images -->
+                          <div class="form-section">
+                              <div class="section-header">
+                                  <div class="section-icon">
+                                      <i class="fas fa-images"></i>
+                                  </div>
+                                  <h2 class="section-title">Brand Images</h2>
+                              </div>
+
+                              <div class="file-upload-area" onclick="document.getElementById('brandImages').click()">
+                                  <div class="upload-icon">
+                                      <i class="fas fa-images"></i>
+                                  </div>
+                                  <h4>Upload Brand Images</h4>
+                                  <p>Drag and drop or click to select (Max 5 images, 25MB each)</p>
+                                  <p><small>Supported formats: JPG, PNG, GIF</small></p>
+                              </div>
+                              <input type="file" id="brandImages" class="file-input" accept="image/*" multiple>
+
+                              <div id="imagePreview" class="image-preview-grid"></div>
+
+                              <div style="margin-top: 16px; display: flex;justify-content: space-between; align-items: center;">
+                                  <button type="button" class="btn btn-outline-primary btn-sm" id="clearImages">
+                                      <i class="fas fa-trash-alt"></i> Clear All Images
+                                  </button>
+                                  <span id="imageCounter" style="color: var(--secondary-gray); font-size: 0.9rem;">0/5 images uploaded</span>
+                              </div>
+                          </div>
+
+                          <!-- Social Links -->
+                          <div class="form-section">
+                              <div class="section-header">
+                                  <div class="section-icon">
+                                      <i class="fas fa-link"></i>
+                                  </div>
+                                  <h2 class="section-title">Social Links</h2>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="form-label">Brand Website</label>
+                                  <div class="social-link-input">
+                                      <i class="fas fa-globe social-icon"></i>
+                                      <input type="url" class="form-control social-input" id="websiteLink" placeholder="https://yourbrand.com">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="form-label">Instagram</label>
+                                  <div class="social-link-input">
+                                      <i class="fab fa-instagram social-icon"></i>
+                                      <input type="url" class="form-control social-input" id="instagramLink" placeholder="https://instagram.com/yourbrand">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="form-label">YouTube</label>
+                                  <div class="social-link-input">
+                                      <i class="fab fa-youtube social-icon"></i>
+                                      <input type="url" class="form-control social-input" id="youtubeLink" placeholder="https://youtube.com/c/yourbrand">
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Testimonial Links -->
+                          <div class="form-section">
+                              <div class="section-header">
+                                  <div class="section-icon">
+                                      <i class="fas fa-quote-right"></i>
+                                  </div>
+                                  <h2 class="section-title">Testimonial Links</h2>
+                              </div>
+
+                              <div id="testimonialContainer"></div>
+
+                              <button type="button" class="btn btn-outline-primary" id="addTestimonial">
+                                  <i class="fas fa-plus"></i> Add Testimonial Link
+                              </button>
+                          </div>
+
+
+
+                          <!-- Save Section -->
+                          <div class="save-section">
+                              <div class="save-info">
+                                  <div class="edit-mode-indicator">
+                                      <i class="fas fa-edit"></i> Edit Mode
+                                  </div>
+                                  <div>All changes are saved to browser storage</div>
+                              </div>
+                              <div>
+                                  <button type="button" class="btn btn-outline-primary" id="editBtn">
+                                      <i class="fas fa-edit"></i> Edit Settings
+                                  </button>
+                                  <button type="submit" class="btn btn-primary btn-lg" id="saveBtn" style="display: none;">
+                                      </i> Save Changes
+                                  </button>
+                              </div>
+                          </div>
+                      </form>
+                    </div>
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+                    <script>
+                      class SettingsDashboard {
+                          constructor() {
+                              this.isEditMode = false;
+                              this.testimonialCount = 0;
+                              this.brandImages = [];
+                              this.formData = {};
+                              this.init();
+                          }
+
+                          init() {
+                              this.populateYearSelect();
+                              this.setupEventListeners();
+                              this.loadSavedData();
+                              this.addTestimonialField(); // Add initial testimonial field
+                              this.toggleEditMode(false);
+                          }
+
+                          populateYearSelect() {
+                              const yearSelect = document.getElementById('brandYear');
+                              const currentYear = new Date().getFullYear();
+
+                              for (let year = currentYear; year >= 1900; year--) {
+                                  const option = document.createElement('option');
+                                  option.value = year;
+                                  option.textContent = year;
+                                  yearSelect.appendChild(option);
+                              }
+                          }
+
+                          setupEventListeners() {
+                              // Edit/Save buttons
+                              document.getElementById('editBtn').addEventListener('click', () => this.toggleEditMode(true));
+                              document.getElementById('saveBtn').addEventListener('click', (e) => this.handleSave(e));
+
+                              // File uploads
+                              document.getElementById('brochureFile').addEventListener('change', (e) => this.handleBrochureUpload(e));
+                              document.getElementById('brandImages').addEventListener('change', (e) => this.handleImageUpload(e));
+                              document.getElementById('clearImages').addEventListener('click', () => this.clearAllImages());
+
+                              // Testimonials
+                              document.getElementById('addTestimonial').addEventListener('click', () => this.addTestimonialField());
+
+                              // Form validation
+                              const inputs = document.querySelectorAll('input[required]');
+                              inputs.forEach(input => {
+                                  input.addEventListener('blur', () => this.validateField(input));
+                              });
+
+                              // Phone number validation
+                              ['phoneNumber', 'whatsappNumber'].forEach(id => {
+                                  document.getElementById(id).addEventListener('input', (e) => this.validatePhoneNumber(e));
+                              });
+                          }
+
+                          toggleEditMode(editMode) {
+                              this.isEditMode = editMode;
+                              const form = document.getElementById('settingsForm');
+                              const inputs = form.querySelectorAll('input, select, textarea');
+                              const editBtn = document.getElementById('editBtn');
+                              const saveBtn = document.getElementById('saveBtn');
+
+                              inputs.forEach(input => {
+                                  input.disabled = !editMode;
+                              });
+
+                              if (editMode) {
+                                  form.classList.add('edit-mode');
+                                  editBtn.style.display = 'none';
+                                  saveBtn.style.display = 'inline-flex';
+                              } else {
+                                  form.classList.remove('edit-mode');
+                                  editBtn.style.display = 'inline-flex';
+                                  saveBtn.style.display = 'none';
+                              }
+                          }
+
+                          handleSave(e) {
+                              e.preventDefault();
+
+                              if (this.validateForm()) {
+                                  this.saveFormData();
+                                  this.showSuccessMessage();
+                                  this.toggleEditMode(false);
+                              }
+                          }
+
+                          validateForm() {
+                              const requiredFields = document.querySelectorAll('input[required]');
+                              let isValid = true;
+
+                              requiredFields.forEach(field => {
+                                  if (!this.validateField(field)) {
+                                      isValid = false;
+                                  }
+                              });
+
+                              return isValid;
+                          }
+
+                          validateField(field) {
+                              const value = field.value.trim();
+                              let isValid = true;
+
+                              // Remove previous error styling
+                              field.classList.remove('is-invalid');
+
+                              if (field.hasAttribute('required') && !value) {
+                                  isValid = false;
+                              } else if (field.type === 'tel' && value) {
+                                  isValid = /^\d{10}$/.test(value);
+                              } else if (field.type === 'url' && value) {
+                                  try {
+                                      new URL(value);
+                                  } catch {
+                                      isValid = false;
+                                  }
+                              }
+
+                              if (!isValid) {
+                                  field.classList.add('is-invalid');
+                              }
+
+                              return isValid;
+                          }
+
+                          validatePhoneNumber(e) {
+                              const input = e.target;
+                              input.value = input.value.replace(/\D/g, '').substring(0, 10);
+                          }
+
+                          saveFormData() {
+                              // Get all form field values
+                              this.formData = {
+                                  brandName: document.getElementById('brandName').value.trim(),
+                                  founderName: document.getElementById('founderName').value.trim(),
+                                  brandAddress: document.getElementById('brandAddress').value.trim(),
+                                  brandYear: document.getElementById('brandYear').value,
+                                  phoneNumber: document.getElementById('phoneNumber').value.trim(),
+                                  whatsappNumber: document.getElementById('whatsappNumber').value.trim(),
+                                  websiteLink: document.getElementById('websiteLink').value.trim(),
+                                  instagramLink: document.getElementById('instagramLink').value.trim(),
+                                  youtubeLink: document.getElementById('youtubeLink').value.trim(),
+                                  testimonials: this.getTestimonialLinks(),
+                                  brandImages: this.brandImages,
+                                  brochureFile: this.getBrochureData(),
+                                  savedAt: new Date().toISOString()
+                              };
+
+                              // Save to localStorage
+                              try {
+                                  localStorage.setItem('franchiseSettings', JSON.stringify(this.formData));
+                                  console.log('Settings saved successfully:', this.formData);
+                              } catch (error) {
+                                  console.error('Error saving settings:', error);
+                                  alert('Error saving settings. Please try again.');
+                              }
+                          }
+
+                          loadSavedData() {
+                              try {
+                                  const savedData = localStorage.getItem('franchiseSettings');
+                                  if (savedData) {
+                                      this.formData = JSON.parse(savedData);
+                                      this.populateFormWithData();
+                                      console.log('Settings loaded successfully');
+                                  }
+                              } catch (error) {
+                                  console.error('Error loading settings:', error);
+                              }
+                          }
+
+                          populateFormWithData() {
+                              if (!this.formData) return;
+
+                              // Populate basic fields
+                              if (this.formData.brandName) document.getElementById('brandName').value = this.formData.brandName;
+                              if (this.formData.founderName) document.getElementById('founderName').value = this.formData.founderName;
+                              if (this.formData.brandAddress) document.getElementById('brandAddress').value = this.formData.brandAddress;
+                              if (this.formData.brandYear) document.getElementById('brandYear').value = this.formData.brandYear;
+                              if (this.formData.phoneNumber) document.getElementById('phoneNumber').value = this.formData.phoneNumber;
+                              if (this.formData.whatsappNumber) document.getElementById('whatsappNumber').value = this.formData.whatsappNumber;
+                              if (this.formData.websiteLink) document.getElementById('websiteLink').value = this.formData.websiteLink;
+                              if (this.formData.instagramLink) document.getElementById('instagramLink').value = this.formData.instagramLink;
+                              if (this.formData.youtubeLink) document.getElementById('youtubeLink').value = this.formData.youtubeLink;
+
+                              // Load brand images
+                              if (this.formData.brandImages && this.formData.brandImages.length > 0) {
+                                  this.brandImages = this.formData.brandImages;
+                                  this.renderImagePreview();
+                                  this.updateImageCounter();
+                              }
+
+                              // Load testimonials
+                              if (this.formData.testimonials && this.formData.testimonials.length > 0) {
+                                  // Clear existing testimonial fields
+                                  document.getElementById('testimonialContainer').innerHTML = '';
+                                  this.testimonialCount = 0;
+
+                                  // Add testimonial fields with data
+                                  this.formData.testimonials.forEach(testimonial => {
+                                      this.addTestimonialField(testimonial.url);
+                                  });
+                              }
+
+                              // Load brochure if exists
+                              if (this.formData.brochureFile) {
+                                  this.displayBrochurePreview(this.formData.brochureFile);
+                              }
+                          }
+
+                          getBrochureData() {
+                              const preview = document.getElementById('brochurePreview');
+                              if (preview.innerHTML) {
+                                  const fileInfo = preview.querySelector('div');
+                                  if (fileInfo) {
+                                      return {
+                                          name: fileInfo.textContent || 'brochure',
+                                          hasFile: true
+                                      };
+                                  }
+                              }
+                              return null;
+                          }
+
+                          showSuccessMessage() {
+                              const message = document.getElementById('successMessage');
+                              message.classList.add('show');
+
+                              setTimeout(() => {
+                                  message.classList.remove('show');
+                              }, 3000);
+                          }
+
+                          handleBrochureUpload(e) {
+                              const file = e.target.files[0];
+                              if (!file) return;
+
+                              if (file.size > 25 * 1024 * 1024) {
+                                  alert('File size must be less than 25MB');
+                                  return;
+                              }
+
+                              const reader = new FileReader();
+                              reader.onload = (e) => {
+                                  this.displayBrochurePreview({
+                                      name: file.name,
+                                      size: file.size,
+                                      hasFile: true,
+                                      url: e.target.result
+                                  });
+                              };
+
+                              if (file.type === 'application/pdf') {
+                                  reader.readAsDataURL(file);
+                              } else {
+                                  reader.readAsDataURL(file);
+                              }
+                          }
+
+                          displayBrochurePreview(fileData) {
+                              const preview = document.getElementById('brochurePreview');
+                              const sizeText = fileData.size ? this.formatFileSize(fileData.size) : 'Uploaded file';
+                              const isPdf = fileData.name.toLowerCase().endsWith('.pdf');
+                              
+                              preview.innerHTML = `
+                                  <div style="padding: 16px; background: #f8f9fa; border-radius: 8px; margin-top: 16px;">
+                                      <div style="display: flex; align-items: center; gap: 12px;">
+                                          <i class="fas ${isPdf ? 'fa-file-pdf' : 'fa-file-image'}" style="font-size: 1.5rem; color: ${isPdf ? '#dc3545' : '#0d6efd'}"></i>
+                                          <div style="flex-grow: 1;">
+                                              <div style="font-weight: 500;">${fileData.name}</div>
+                                              <div style="font-size: 0.9rem; color: var(--secondary-gray);">${sizeText}</div>
+                                          </div>
+                                          <div class="preview-actions" style="display: flex; gap: 8px;">
+                                            
+                                              <button type="button" class="btn btn-danger btn-sm" onclick="dashboard.removeBrochure()">
+                                                  <i class="fas fa-times"></i>
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              `;
+                          }
+
+                          removeBrochure() {
+                              document.getElementById('brochurePreview').innerHTML = '';
+                              document.getElementById('brochureFile').value = '';
+                          }
+
+                          handleImageUpload(e) {
+                              const files = Array.from(e.target.files);
+
+                              if (this.brandImages.length + files.length > 5) {
+                                  alert('Maximum 5 images allowed');
+                                  return;
+                              }
+
+                              files.forEach(file => {
+                                  if (file.size > 25 * 1024 * 1024) {
+                                      alert(`${file.name} is too large. Maximum size is 25MB`);
+                                      return;
+                                  }
+
+                                  const reader = new FileReader();
+                                  reader.onload = (e) => {
+                                      const imageData = {
+                                          file: file,
+                                          url: e.target.result,
+                                          name: file.name,
+                                          size: file.size
+                                      };
+
+                                      this.brandImages.push(imageData);
+                                      this.renderImagePreview();
+                                      this.updateImageCounter();
+                                  };
+                                  reader.readAsDataURL(file);
+                              });
+
+                              // Clear the input
+                              e.target.value = '';
+                          }
+
+                          renderImagePreview() {
+                              const container = document.getElementById('imagePreview');
+                              container.innerHTML = '';
+
+                              this.brandImages.forEach((image, index) => {
+                                  const imageCard = document.createElement('div');
+                                  imageCard.className = 'image-card';
+                                  imageCard.innerHTML = `
+                                      <div class="image-container">
+                                          <img src="${image.url}" alt="${image.name}" class="image-thumb">
+                                      </div>
+                                      <div class="image-info">
+                                          <p class="image-name">${image.name}</p>
+                                      </div>
+                                      <button type="button" class="remove-image" onclick="dashboard.removeImage(${index})">
+                                          <i class="fas fa-times"></i>
+                                      </button>
+                                  `;
+                                  container.appendChild(imageCard);
+                              });
+                          }
+
+                          removeImage(index) {
+                              this.brandImages.splice(index, 1);
+                              this.renderImagePreview();
+                              this.updateImageCounter();
+                          }
+
+                          clearAllImages() {
+                              this.brandImages = [];
+                              this.renderImagePreview();
+                              this.updateImageCounter();
+                              document.getElementById('brandImages').value = '';
+                          }
+
+                          updateImageCounter() {
+                              const counter = document.getElementById('imageCounter');
+                              counter.textContent = `${this.brandImages.length}/5 images uploaded`;
+                          }
+
+                          addTestimonialField(url = '') {
+                              this.testimonialCount++;
+                              const container = document.getElementById('testimonialContainer');
+
+                              const testimonialDiv = document.createElement('div');
+                              testimonialDiv.className = 'testimonial-item';
+                              testimonialDiv.innerHTML = `
+                                  <div class="testimonial-header">
+                                      <div class="testimonial-number">${this.testimonialCount}</div>
+                                      <label class="form-label" style="margin: 0; flex: 1;">Testimonial Link ${this.testimonialCount}</label>
+                                  </div>
+                                  <div class="social-link-input">
+                                      <i class="fas fa-quote-left social-icon"></i>
+                                      <input type="url" class="form-control social-input" name="testimonial_${this.testimonialCount}" placeholder="https://example.com/testimonial" value="${url}">
+                                  </div>
+                                  <button type="button" class="remove-testimonial" onclick="dashboard.removeTestimonial(this)" title="Remove testimonial">
+                                      <i class="fas fa-trash-alt"></i>
+                                  </button>
+                              `;
+
+                              container.appendChild(testimonialDiv);
+                              this.updateTestimonialNumbers();
+                          }
+
+                          removeTestimonial(button) {
+                              const testimonialItem = button.closest('.testimonial-item');
+                              testimonialItem.remove();
+                              this.updateTestimonialNumbers();
+                          }
+
+                          updateTestimonialNumbers() {
+                              const testimonials = document.querySelectorAll('.testimonial-item');
+                              testimonials.forEach((item, index) => {
+                                  const number = item.querySelector('.testimonial-number');
+                                  const label = item.querySelector('.form-label');
+                                  const input = item.querySelector('input');
+
+                                  number.textContent = index + 1;
+                                  label.textContent = `Testimonial Link ${index + 1}`;
+                                  input.name = `testimonial_${index + 1}`;
+                              });
+                              this.testimonialCount = testimonials.length;
+                          }
+
+                          getTestimonialLinks() {
+                              const testimonials = [];
+                              const inputs = document.querySelectorAll('[name^="testimonial_"]');
+
+                              inputs.forEach(input => {
+                                  if (input.value.trim()) {
+                                      testimonials.push({
+                                          url: input.value.trim(),
+                                          name: input.name
+                                      });
+                                  }
+                              });
+
+                              return testimonials;
+                          }
+
+                          formatFileSize(bytes) {
+                              if (bytes === 0) return '0 Bytes';
+                              const k = 1024;
+                              const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                              const i = Math.floor(Math.log(bytes) / Math.log(k));
+                              return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+                          }
+
+                          // Export settings as JSON
+                          exportSettings() {
+                              if (Object.keys(this.formData).length === 0) {
+                                  alert('No settings to export. Please save some data first.');
+                                  return;
+                              }
+
+                              const dataStr = JSON.stringify(this.formData, null, 2);
+                              const dataBlob = new Blob([dataStr], {type: 'application/json'});
+                              const url = URL.createObjectURL(dataBlob);
+
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.download = `franchise-settings-${new Date().toISOString().split('T')[0]}.json`;
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                              URL.revokeObjectURL(url);
+                          }
+
+
+                          // Show success message with custom text
+                          showSuccessMessage(message = 'Settings saved successfully!') {
+                              const messageElement = document.getElementById('successMessage');
+                              const textElement = messageElement.querySelector('span');
+                              textElement.textContent = message;
+                              messageElement.classList.add('show');
+
+                              setTimeout(() => {
+                                  messageElement.classList.remove('show');
+                              }, 3000);
+                          }
+
+                           // Show a notification message
+                           showNotification(message, type = 'success') {
+                              const notification = document.getElementById('settingsNotification');
+                              const messageSpan = document.getElementById('settingsNotificationMessage');
+
+                              messageSpan.textContent = message;
+                              notification.className = `settings-notification settings-notification-${type} settings-notification-show`;
+
+                              setTimeout(() => {
+                                  notification.classList.remove('settings-notification-show');
+                              }, 3000); // Hide after 3 seconds
+                          }
+
+
+                          // Load sample data for demonstration
+                          loadSampleData() {
+                              document.getElementById('brandName').value = 'Brand Name';
+                              document.getElementById('founderName').value = 'Founder Name';
+                              document.getElementById('brandAddress').value = 'Address';
+                              document.getElementById('brandYear').value = '2018';
+                              document.getElementById('phoneNumber').value = '1234567890';
+                              document.getElementById('whatsappNumber').value = '1234567890';
+                              document.getElementById('websiteLink').value = 'https://website.com';
+                              document.getElementById('instagramLink').value = 'https://instagram.com/';
+                              document.getElementById('youtubeLink').value = 'https://youtube.com/';
+                          }
+                      }
+
+                      // Initialize dashboard
+                      const dashboard = new SettingsDashboard();
+
+                      // Add some sample data for demonstration (remove in production)
+                      setTimeout(() => {
+                          dashboard.loadSampleData();
+                      }, 500);
+
+                      // Add drag and drop functionality for file uploads
+                      function setupDragAndDrop() {
+                          const dropAreas = document.querySelectorAll('.file-upload-area');
+
+                          dropAreas.forEach(area => {
+                              ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                                  area.addEventListener(eventName, preventDefaults, false);
+                              });
+
+                              ['dragenter', 'dragover'].forEach(eventName => {
+                                  area.addEventListener(eventName, () => area.classList.add('dragover'), false);
+                              });
+
+                              ['dragleave', 'drop'].forEach(eventName => {
+                                  area.addEventListener(eventName, () => area.classList.remove('dragover'), false);
+                              });
+
+                              area.addEventListener('drop', handleDrop, false);
+                          });
+                      }
+
+                      function preventDefaults(e) {
+                          e.preventDefault();
+                          e.stopPropagation();
+                      }
+
+                      function handleDrop(e) {
+                          const files = e.dataTransfer.files;
+                          const area = e.target.closest('.file-upload-area');
+
+                          if (area.onclick.toString().includes('brochureFile')) {
+                              document.getElementById('brochureFile').files = files;
+                              dashboard.handleBrochureUpload({ target: { files: files } });
+                          } else if (area.onclick.toString().includes('brandImages')) {
+                              document.getElementById('brandImages').files = files;
+                              dashboard.handleImageUpload({ target: { files: files } });
+                          }
+                      }
+
+                      // Initialize drag and drop
+                      setupDragAndDrop();
+
+
+                      // Add CSS for invalid inputs
+                      const style = document.createElement('style');
+                      style.textContent = `
+                          .form-control.is-invalid {
+                              border-color: var(--danger-color);
+                              box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+                          }
+
+                          .form-control.is-invalid:focus {
+                              border-color: var(--danger-color);
+                              box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+                          }
+                      `;
+                      document.head.appendChild(style);
+                    </script>
                 <div id="styleSelector">
-                
+
                 </div>
             </div>
         </div>
